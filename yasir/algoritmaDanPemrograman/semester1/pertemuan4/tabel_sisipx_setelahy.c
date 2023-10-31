@@ -44,7 +44,7 @@ int main() {
     for (i = 1; i <= MyTab.neff; i++) {
         printf("<%d>", MyTab.T[i]);
     }
-    printf("\n");
+    printf("\n\n");
 
     // menyisipkan nilai x di antara y
     printf("Masukan nilai X: ");
@@ -76,14 +76,15 @@ int main() {
                     MyTab.T[last + 1] = MyTab.T[last];
                     last--;
                 }
-                MyTab.T[last] = x;
+
+                MyTab.T[i] = x;
                 MyTab.neff++;
             }
         }
     }
 
     // cetak tabel
-    printf("Tabel kedua");
+    printf("\nTabel kedua\n");
     for (i = 1; i <= MyTab.neff; i++) {
         printf("<%d>", MyTab.T[i]);
     }
