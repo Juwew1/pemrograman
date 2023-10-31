@@ -25,6 +25,7 @@ int main() {
     // ALGORITMA
     // membuat tabel
     MyTab.neff = 0;
+
     printf("Membuat tabel\n");
     printf("Masukan bilangan: ");
     scanf("%d", &N);
