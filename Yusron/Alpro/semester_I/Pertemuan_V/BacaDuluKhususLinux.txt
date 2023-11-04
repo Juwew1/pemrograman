@@ -1,0 +1,5 @@
+Untuk PEngguna Linux gunakan perintah ini untuk menjalankan program persamaan kuadrat
+
+// Code
+1. gcc namafile.c -o namahasilfile -lm
+2. ./namahasilfile
