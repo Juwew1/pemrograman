@@ -1,8 +1,10 @@
 /**
  * Program: tabel_bil_genap.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ...............
- * Description: .............
+ * Date: 1 November 2023
+ * Description: membuat tabel dari array dan memasukan bilangan sesuai
+ * yang diinputkan oleh pengguna, dengan hasil yang muncul hanya bilangan
+ * genap saja
  */
 
 #include <stdio.h>

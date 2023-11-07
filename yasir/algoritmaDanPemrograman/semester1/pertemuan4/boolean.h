@@ -1,7 +1,7 @@
 // Program: proc_2.c
 // Author: 2350081004/Muhamad Yasir Noval
-// Date: ...............
-// Description: .............
+// Date: 1 November 2023
+// Description: Library atau pustaka untuk tipe data boolean
 
 
 #ifndef PERTEMUAN4_BOOLEAN_H

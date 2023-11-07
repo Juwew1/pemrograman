@@ -1,8 +1,8 @@
 /**
  * Program: tabel_sisipx_setelahy.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ...............
- * Description: .............
+ * Date: 1 November 2023
+ * Description: menyisipkan bilangan yang di inputkan x setelah bilangan y
  */
 
 #include <stdio.h>
@@ -19,8 +19,7 @@ typedef struct {
 int main() {
     // KAMUS
     TabInt MyTab;
-    int N, i, y, x, last, j;
-    boolean ketemu;
+    int N, i, y, x, index;
 
     // ALGORITMA
     // membuat tabel
@@ -54,33 +53,29 @@ int main() {
     printf("Masukan nilai Y: ");
     scanf("%d", &y);
 
-    ketemu = false;
-    i = 1;
+    index = -1;
 
-    while (i <= MyTab.neff && !ketemu) {
+    for (i = 1; i <= MyTab.neff; i++) {
         if (MyTab.T[i] == y) {
-            ketemu = true;
-        } else {
-            i++;
+            index = i;
+            break;
         }
     }
 
-    if (ketemu) {
+    if (index == -1) {
+        // jika y tidak ditemukan di dalam array, tempatkan x di akhir
         if (MyTab.neff < nMax) {
-            last = MyTab.neff;
-
-            if (i == last) {
-                MyTab.neff++;
-                MyTab.T[MyTab.neff] = x;
-            } else {
-                for (j = 1; j <= last - i; j++) {
-                    MyTab.T[last + 1] = MyTab.T[last];
-                    last--;
-                }
-
-                MyTab.T[i] = x;
-                MyTab.neff++;
+            MyTab.neff++;
+            MyTab.T[MyTab.neff] = x;
+        }
+    } else {
+        // jika y ditemukan, masukan x setelah y
+        if (MyTab.neff < nMax) {
+            for (i = MyTab.neff + 1; i > index + 1; i--) {
+                MyTab.T[i] = MyTab.T[i - 1];
             }
+            MyTab.T[index + 1] = x;
+            MyTab.neff++;
         }
     }
 
