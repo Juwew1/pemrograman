@@ -44,12 +44,11 @@ void proc_tukar(int *a, int *b, int *c) {
     // F.S. : a, b dan c saling bertukar nilai
 
     // KAMUS lokal
-    int tmp1, tmp2;
+    int tmp;
 
     // ALGORITMA
-    tmp1 = *b;
-    tmp2 = *a;
-    *a = *c;
-    *b = tmp2;
-    *c = tmp1;
+    tmp = *c;
+    *c = *b;
+    *b = *a;
+    *a = tmp;
 }
