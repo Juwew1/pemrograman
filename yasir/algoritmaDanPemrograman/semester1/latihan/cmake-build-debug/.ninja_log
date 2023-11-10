@@ -1,0 +1,6 @@
+# ninja log v5
+1	871	7212744059133848	CMakeFiles/latihan.dir/enum.c.obj	e35db2fe37955801
+104	1226	7212744062711642	CMakeFiles/latihan.dir/main.c.obj	48fe0006b9d22e92
+2	349	7212749905862755	build.ninja	bfc445cbaab9252e
+5	872	7212744229040032	latihan.exe	d674b64ff9ade3d6
+4	728	7212749773855637	CMakeFiles/latihan.dir/struk.c.obj	fc379d98f648338b

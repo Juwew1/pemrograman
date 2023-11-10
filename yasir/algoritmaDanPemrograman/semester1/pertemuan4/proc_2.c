@@ -1,8 +1,11 @@
 /**
  * Program: proc_2.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ...............
- * Description: .............
+ * Date: 8 November 2023
+ * Description: program untuk memanggil prosedur bernama
+ * tukar yaitu melakukan pertukaran dari 3 buah masukan
+ * bilangan bulat sebagai berikut : a = A, b = B, c = C
+ * menjadi a = C, b = A, c = B
  */
 
 #include <stdio.h>

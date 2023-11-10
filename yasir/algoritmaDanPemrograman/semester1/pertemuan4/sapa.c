@@ -1,8 +1,12 @@
 /**
- * Program: proc_2.c
+ * Program: sapa.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ...............
- * Description: .............
+ * Date: 8 November 2023
+ * Description: Program yang menerima masukan sebuah
+ * string untuk nama, serta integer untuk umur. Program
+ * untuk memanggil prosedur bernama hello, dengan jumlah
+ * argumen 2 buah, yaitu: sebuah string untuk variabel
+ * nama dan integer untuk variabel umur
  */
 
 #include <stdio.h>

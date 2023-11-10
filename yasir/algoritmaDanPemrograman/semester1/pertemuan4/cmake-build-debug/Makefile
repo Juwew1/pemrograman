@@ -128,29 +128,29 @@ pertemuan4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\pertemuan4.dir\build.make CMakeFiles/pertemuan4.dir/build
 .PHONY : pertemuan4/fast
 
-proc_2.obj: proc_2.c.obj
-.PHONY : proc_2.obj
+main.obj: main.c.obj
+.PHONY : main.obj
 
 # target to build an object file
-proc_2.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pertemuan4.dir\build.make CMakeFiles/pertemuan4.dir/proc_2.c.obj
-.PHONY : proc_2.c.obj
+main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pertemuan4.dir\build.make CMakeFiles/pertemuan4.dir/main.c.obj
+.PHONY : main.c.obj
 
-proc_2.i: proc_2.c.i
-.PHONY : proc_2.i
+main.i: main.c.i
+.PHONY : main.i
 
 # target to preprocess a source file
-proc_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pertemuan4.dir\build.make CMakeFiles/pertemuan4.dir/proc_2.c.i
-.PHONY : proc_2.c.i
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pertemuan4.dir\build.make CMakeFiles/pertemuan4.dir/main.c.i
+.PHONY : main.c.i
 
-proc_2.s: proc_2.c.s
-.PHONY : proc_2.s
+main.s: main.c.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-proc_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pertemuan4.dir\build.make CMakeFiles/pertemuan4.dir/proc_2.c.s
-.PHONY : proc_2.c.s
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pertemuan4.dir\build.make CMakeFiles/pertemuan4.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... pertemuan4
-	@echo ... proc_2.obj
-	@echo ... proc_2.i
-	@echo ... proc_2.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

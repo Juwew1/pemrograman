@@ -1,12 +1,17 @@
 /**
  * Program: prosedurCetakDelLast.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ...............
- * Description: .............
+ * Date: 8 November 2023
+ * Description: Membuat tabel integer dengan menggunakan
+ * prosedur sebagai pemisah untuk aksi tertentu misalnya
+ * cetak tabel, menambahkan elemen array, cetak tabel genap
+ * membuat tabel, cetak tabel invers, insert first, dan
+ * delete last
  */
 
 #include <conio.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "boolean.h"
 
 #define nMax 10
@@ -35,9 +40,10 @@ void DelLast(TabInt *T, int *y);
 int main() {
     // KAMUS
     TabInt MyTab;
-    int N, x;
+    int N, x, y;
 
     // ALGORITMA
+    y = 0;
     CreateTab(&MyTab);
 
     printf("Masukan bil: ");
@@ -52,7 +58,7 @@ int main() {
     printf("Masukan nilai X: ");
     scanf("%d", &x);
 
-    printf("Cetak Tabel\n");
+    printf("\nCetak Tabel\n");
     CetakTab(MyTab);
 
     printf("\n\nCetak Tabel Genap\n");
@@ -64,8 +70,8 @@ int main() {
     printf("\n\nCetak Tabel Insert First\n");
     InsertFirst(&MyTab, x);
 
-    printf("\n\nCetak Tabel Delet last\n");
-    DelLast(&MyTab);
+    printf("\n\nCetak Tabel Delete Last\n");
+    DelLast(&MyTab, &y);
 
     return 0;
 }
@@ -87,6 +93,7 @@ void InsertFirst(TabInt *T, int x) {
 
     last = (*T).neff;
 
+    // menggeser data
     if ((*T).neff < nMax) {
         for (i = 1; i <= (*T).neff; i++) {
             (*T).Tb[last + 1] = (*T).Tb[last];
@@ -96,32 +103,31 @@ void InsertFirst(TabInt *T, int x) {
         (*T).neff++;
     }
 
+    // mencetak tabel
     for (i = 1; i <= (*T).neff; i++) {
         printf("<%d>", (*T).Tb[i]);
     }
 }
 
 void DelLast(TabInt *T, int *y) {
-    int last, i;
+    int last, i, tmp;
 
-    if ((*T).neff < nMax) {
+    last = (*T).neff;
+
+    // mengambil data terakhir dan memasukannya kedalam variabel tmp
+    if (last < nMax) {
         for (i = 1; i <= (*T).neff; i++) {
-            (*T).Tb[last] = *y;
-            last--;
+            tmp = (*T).Tb[last];
         }
-        (*T).Tb[last] = *y;
-        (*T).neff++;
+        *y = tmp;
+        (*T).neff--;
     }
 
-    printf("Data tabel sebelum dihapus");
+    // mencetak tabel
     for (i = 1; i <= (*T).neff; i++) {
         printf("<%d>", (*T).Tb[i]);
     }
-
-    printf("Data tabel sesudah dihapus");
-    for (i = 1; i <= (*T).neff; i++) {
-        printf("<%d>", (*T).Tb[i]);
-    }
+    printf("\nY = %d", *y);
 }
 
 void CetakGenap(TabInt T) {

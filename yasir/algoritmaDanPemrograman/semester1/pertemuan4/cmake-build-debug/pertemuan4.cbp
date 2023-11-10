@@ -76,7 +76,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/proc_2.c">
+		<Unit filename="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/main.c">
 			<Option target="pertemuan4"/>
 		</Unit>
 		<Unit filename="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/CMakeLists.txt">
