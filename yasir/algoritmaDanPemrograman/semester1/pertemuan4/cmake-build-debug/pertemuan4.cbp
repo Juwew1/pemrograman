@@ -11,10 +11,10 @@
 				<Option working_dir="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="pertemuan4">
@@ -24,16 +24,16 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 pertemuan4"/>
-					<CompileFile command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 pertemuan4"/>
+					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="pertemuan4/fast">
@@ -43,36 +43,36 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 pertemuan4/fast"/>
-					<CompileFile command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 pertemuan4/fast"/>
+					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/myasi/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
