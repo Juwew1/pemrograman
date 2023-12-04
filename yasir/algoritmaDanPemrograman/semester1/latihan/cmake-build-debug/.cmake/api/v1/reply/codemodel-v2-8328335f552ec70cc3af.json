@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/latihan/cmake-build-debug",
-		"source" : "E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/latihan"
+		"build" : "D:/pemrograman/yasir/algoritmaDanPemrograman/semester1/latihan/cmake-build-debug",
+		"source" : "D:/pemrograman/yasir/algoritmaDanPemrograman/semester1/latihan"
 	},
 	"version" : 
 	{

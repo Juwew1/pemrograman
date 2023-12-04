@@ -1,0 +1,3 @@
+C:\Users\aibnu\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\latihan.dir/objects.a
+C:\Users\aibnu\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc CMakeFiles\latihan.dir/objects.a @CMakeFiles\latihan.dir\objects1.rsp
+C:\Users\aibnu\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\latihan.dir/objects.a -Wl,--no-whole-archive -o latihan.exe -Wl,--out-implib,liblatihan.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\latihan.dir\linkLibs.rsp
