@@ -1,6 +1,4 @@
 # ninja log v5
-5	629	7202603902441012	CMakeFiles/pertemuan6.dir/fungsi1.c.obj	a95fbd74b12e4af7
-0	788	7202597917856686	CMakeFiles/pertemuan6.dir/array_1.c.obj	f3dbc07ed8026b99
 100	1163	7202597921614372	CMakeFiles/pertemuan6.dir/main.c.obj	d1a3641ca829e762
-2	347	7202604424145945	build.ninja	8c1f2e81e0d29e60
+2	347	7231735689622388	build.ninja	8c1f2e81e0d29e60
 3	915	7202604113092152	pertemuan6.exe	1e84d93949aea8ff

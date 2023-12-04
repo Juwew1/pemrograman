@@ -1,8 +1,10 @@
 /**
  * Program: fungsi_1.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ...............
- * Description: .............
+ * Date: 28 November 2023
+ * Description: Menghitung nilai Diskriminant dari 3 inputan
+ * yang diinputkan oleh user dan menyimpan nilai nya pada
+ * variabel a, b, dan c dengan tipe data nya tipe data Integer
  */
 
 #include <stdio.h>

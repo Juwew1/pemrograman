@@ -1,8 +1,11 @@
 /**
  * Program: tabInt.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ...............
- * Description: .............
+ * Date: 28 November 2023
+ * Description: Prorgram untuk membuat tabel integer dengan membuat
+ * prosedur untuk membuat tabel, menambahkan elemen, mencetak tabel
+ * dan membuat fungsi untuk Mencari elemen, Menjumlahkan
+ * elemen dan Mengambil jumlah elemen pada TabInt
  */
 
 #include <conio.h>
@@ -34,7 +37,6 @@ int main() {
     // KAMUS
     TabInt MyTab;
     int N;
-    int x;
 
     // ALGORITMA
     CreateTab(&MyTab);
