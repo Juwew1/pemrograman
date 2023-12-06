@@ -1,8 +1,10 @@
 /**
  * Program: array_1.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ...............
- * Description: .............
+ * Date: 6 Desember 2023
+ * Description: membuat program untuk menginput
+ * nama-nama hari kemudian menyimpannya dalam
+ * array
  */
 
 #include <conio.h>
