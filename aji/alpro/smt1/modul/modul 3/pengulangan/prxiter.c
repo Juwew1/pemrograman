@@ -26,7 +26,7 @@ int main(){
 			printf("masukkan nilai x (int), akhiri dengan 999 : ");
 			scanf("%d", &x); /* Next Elmt*/
 			if(x == 999)
-			break;
+				break;
 			else
 			{
 				Sum = Sum + x; /*proses*/

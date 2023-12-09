@@ -30,5 +30,4 @@ int main(){
 	printf("hasil penjumlahan = %d \n", Sum); /*Terminasi*/
 	
 	return 0;
-}
-	
+}	
