@@ -1,6 +1,11 @@
-//
-// Created by myasi on 11/5/2023.
-//
+/**
+ * Program: TabInt.c
+ * Author: 2350081004/Muhamad Yasir Noval
+ * Date: 28 November 2023
+ * Description: program untuk mencetak bilangan
+ * dari 1 sampai 100 menggunakan perulangan for
+ * tapi yang tercetak hanya bilangan prima saja
+ */
 
 #include <stdio.h>
 #include <math.h>

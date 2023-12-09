@@ -1,12 +1,14 @@
 /**
- * Program: fungsi1.c
+ * Program: array_1.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ...............
- * Description: .............
+ * Date: 6 Desember 2023
+ * Description: membuat program untuk menginput
+ * nama-nama hari menggunakan prosedur Catat Hari
+ * kemudian menyimpannya dalam array
  */
 
-#include <stdio.h>
 #include <conio.h>
+#include <stdio.h>
 #include <string.h>
 
 // KAMUS global
@@ -18,7 +20,7 @@ void CatatHari(TabString Hari[7], char NamaHari[10], int ke);
 
 int main() {
     // KAMUS lokal di main driver
-    TabString MyTabel[7];
+    TabString MyTabel[10];
     char Hari[10];
     int i;
 
@@ -26,7 +28,6 @@ int main() {
     for (i = 1; i <= 7; i++) {
         printf("Masukan Nama Hari ke %d : ", i);
         scanf("%s", &Hari);
-
         CatatHari(MyTabel, Hari, i);
     }
 

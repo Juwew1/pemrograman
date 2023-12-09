@@ -1,9 +1,14 @@
-//
-// Created by aibnu on 06/12/2023.
-//
+/**
+ * Program: MaxSort.c
+ * Author: 2350081004/Muhamad Yasir Noval
+ * Date: 28 November 2023
+ * Description: program untuk mengurutkan nilai
+ * dari yang terkecil ke yang terbesar dari data
+ * tabel yang sudah diinputkan oleh pengguna
+ */
 #include <stdlib.h>
 #include <stdio.h>
-#include "../boolean.h"
+#include "boolean.h"
 
 #define nMax 10
 

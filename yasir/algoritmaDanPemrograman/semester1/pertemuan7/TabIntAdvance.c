@@ -1,14 +1,15 @@
 /**
- * Program: tabIntAdvance.c
+ * Program: TabIntAdvance.c
  * Author: 2350081004/Muhamad Yasir Noval
  * Date: 28 November 2023
  * Description: Prorgram untuk membuat tabel integer dengan membuat
  * prosedur untuk membuat tabel, menambahkan elemen, mencetak tabel
  * dan membuat fungsi untuk Mencari elemen, Menjumlahkan elemen,
  * menjumlahakan hanya elemen genap, Mengambil jumlah elemen pada TabInt,
- * mengambil jumlah elemen ganjil pada TabInt, dan mengcopy tabel
+ * mengambil jumlah elemen ganjil pada TabInt, mengcopy tabel
  * dari TabInt tapi di negasikan atau elemen yang didalamnya di kali
- * -1
+ * -1, mencari bilangan prima dari data tabel yang sudah diinputkan,
+ * dan men-sortir nilai dari yang terkecil sampai yang terbesar
  */
 
 
