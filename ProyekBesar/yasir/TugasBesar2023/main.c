@@ -1,8 +1,8 @@
 /**
- * Program: Mmain.c
+ * Program: Main.c
  * Author:  - Muhamad Yasir Noval/2350081004
  *          - Muhamad Yusron Noval/235081003
- *          - Abhin naya
+ *          - Muhammad Abhinaya Rakan Albarra/2350081011
  * Date: 3 Desember 2023
  * Description: Diketahui sekumpulan data berupa nilai ujian berupa
  * UTS, tugas dan UAS, dengan rentang 10-100, setiap data nilai di-
@@ -12,39 +12,114 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
+#define baris 10
+#define kolom 5
+
+typedef struct {
+    int nilai[baris + 1][kolom + 1];
+    int neffBaris;
+    int neffKolom;
+} TabNilai;
+
+// prototype
+void createTab(TabNilai *T);
+
+void cetakTab(TabNilai T);
+
+void createData(TabNilai *T);
+
+void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas);
 
 int main() {
     // kamus lokal
-    int i, j;
+    int uts, tugas, uas;
+    TabNilai myTab;
+
 
     // algoritma
-    int nilai[10][5] = {
-            {1,  70, 40, 60, 0},
-            {2,  60, 30, 50, 0},
-            {3,  50, 20, 40, 0},
-            {4,  40, 10, 30, 0},
-            {5,  30, 90, 20, 0},
-            {6,  20, 80, 10, 0},
-            {7,  10, 70, 90, 0},
-            {8,  90, 60, 80, 0},
-            {9,  80, 50, 70, 0},
-            {10, 75, 75, 75, 0},
-    };
+    createTab(&myTab);
+    createData(&myTab);
+
+    printf("\tPROGRAM PREDIKSI KELAS DATA\n");
 
     printf("Tabel Data Nilai\n");
-    printf("No\t| UTS\t| UAS\t| Tugas\t| K\t|\n");
-    for (i = 0; i < 10; i++) {
-        for (j = 0; j < 5; j++) {
-            printf(" %d\t|", nilai[i][j]);
-        }
-
-        printf("\n");
-    }
+    cetakTab(myTab);
 
     printf("\nStatus nilai: \n");
     printf("80 = A\t70 = B\t60 = C\n");
 
-    printf("%d", nilai[0][1]);
+    printf("\nMasukan Nilai UTS: ");
+    scanf("%d", &uts);
+
+    printf("\nMasukan Nilai Tugas: ");
+    scanf("%d", &tugas);
+
+    printf("\nMasukan Nilai UAS: ");
+    scanf("%d", &uas);
+
+    printf("\n\nTabel Data Nilai\n");
+    jarakKedekatan(&myTab, uts, tugas, uas);
+    cetakTab(myTab);
 
     return 0;
+}
+
+// body of prototype
+void createTab(TabNilai *T) {
+    // kamus lokal
+
+    // algoritma
+    (*T).neffBaris = 0;
+    (*T).neffKolom = 0;
+}
+
+void createData(TabNilai *T) {
+    // kamus lokal
+    int i, j;
+
+    // algoritma
+    srand(time(NULL));
+
+    for (i = 0; i < baris; i++) {
+        for (j = 0; j < kolom; j++) {
+            if (j == 4) {
+                (*T).nilai[i][j] = 0;
+            } else if (j == 0){
+                (*T).nilai[i][j] = i + 1;
+            } else {
+                (*T).nilai[i][j] = 10 + rand() % (95 - 10 + 1);
+            }
+        }
+    }
+}
+
+void cetakTab(TabNilai T) {
+    // kamus lokal
+    int i, j;
+
+    // algoritma
+    T.neffBaris = baris;
+    T.neffKolom = kolom;
+
+    printf("No\t| UTS\t| UAS\t| Tugas\t| K\t|\n");
+    for (i = 0; i < T.neffBaris; i++) {
+        for (j = 0; j < T.neffKolom; j++) {
+            printf(" %d\t|", T.nilai[i][j]);
+        }
+
+        printf("\n");
+    }
+}
+
+void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas) {
+    // kamus lokal
+    int jarak, i;
+
+    // algoritma
+    for (i = 0; i < baris; i++) {
+        jarak = (uts - (*T).nilai[i][1]) + (uas - (*T).nilai[i][2]) + (tugas - (*T).nilai[i][3]);
+        (*T).nilai[i][4] = jarak;
+    }
 }

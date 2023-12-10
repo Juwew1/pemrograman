@@ -5,6 +5,6 @@
 -- Check for working C compiler: D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/gcc.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Configuring done (9.0s)
+-- Configuring done (18.5s)
 -- Generating done (0.0s)
 -- Build files have been written to: E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan5/cmake-build-debug

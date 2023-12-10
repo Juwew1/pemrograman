@@ -1,0 +1,3 @@
+"D:\program installer\JetbrainsToolbox\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\TugasBesar2023.dir/objects.a
+"D:\program installer\JetbrainsToolbox\Programs\CLion\bin\mingw\bin\ar.exe" qc CMakeFiles\TugasBesar2023.dir/objects.a @CMakeFiles\TugasBesar2023.dir\objects1.rsp
+"D:\program installer\JetbrainsToolbox\Programs\CLion\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\TugasBesar2023.dir/objects.a -Wl,--no-whole-archive -o TugasBesar2023.exe -Wl,--out-implib,libTugasBesar2023.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\TugasBesar2023.dir\linkLibs.rsp
