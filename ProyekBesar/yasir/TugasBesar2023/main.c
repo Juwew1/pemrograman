@@ -103,7 +103,7 @@ void cetakTab(TabNilai T) {
     T.neffBaris = baris;
     T.neffKolom = kolom;
 
-    printf("No\t| UTS\t| UAS\t| Tugas\t| K\t|\n");
+    printf("No\t| UTS\t| UAS\t| Tugas\t| K\t|Status\t|\n");
     for (i = 0; i < T.neffBaris; i++) {
         for (j = 0; j < T.neffKolom; j++) {
             printf(" %d\t|", T.nilai[i][j]);
