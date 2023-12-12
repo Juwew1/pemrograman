@@ -15,7 +15,7 @@
 #include <time.h>
 
 #define baris 10
-#define kolom 5
+#define kolom 6
 
 typedef struct {
     int nilai[baris + 1][kolom + 1];
@@ -53,10 +53,10 @@ int main() {
     printf("\nMasukan Nilai UTS: ");
     scanf("%d", &uts);
 
-    printf("\nMasukan Nilai Tugas: ");
+    printf("Masukan Nilai Tugas: ");
     scanf("%d", &tugas);
 
-    printf("\nMasukan Nilai UAS: ");
+    printf("Masukan Nilai UAS: ");
     scanf("%d", &uas);
 
     printf("\n\nTabel Data Nilai\n");
@@ -84,7 +84,7 @@ void createData(TabNilai *T) {
 
     for (i = 0; i < baris; i++) {
         for (j = 0; j < kolom; j++) {
-            if (j == 4) {
+            if (j == 4 || j == 5) {
                 (*T).nilai[i][j] = 0;
             } else if (j == 0){
                 (*T).nilai[i][j] = i + 1;

@@ -1,8 +1,9 @@
 /**
  * Program: BubbleSort.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ..........................
- * Description: ...................
+ * Date: 12 Desember 2023
+ * Description: Program untuk mengurutkan bilangan
+ * dari data yang ada didalam tabel secara Ascending
  */
 
 #include <stdio.h>

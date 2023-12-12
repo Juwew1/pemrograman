@@ -1,4 +1,4 @@
-# Install script for directory: E:/Documents/pemrograman/ProyekBesar/yasir/TugasBesar2023
+# Install script for directory: D:/pemrograman/ProyekBesar/yasir/TugasBesar2023
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/aibnu/AppData/Local/Programs/CLion/bin/mingw/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/Documents/pemrograman/ProyekBesar/yasir/TugasBesar2023/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/pemrograman/ProyekBesar/yasir/TugasBesar2023/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
