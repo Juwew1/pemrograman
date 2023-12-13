@@ -15,7 +15,7 @@
 #include <time.h>
 
 #define baris 10
-#define kolom 6
+#define kolom 5
 
 typedef struct {
     int nilai[baris + 1][kolom + 1];
@@ -31,6 +31,8 @@ void cetakTab(TabNilai T);
 void createData(TabNilai *T);
 
 void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas);
+
+int jarakTerkecil(TabNilai T);
 
 int main() {
     // kamus lokal
@@ -63,6 +65,9 @@ int main() {
     jarakKedekatan(&myTab, uts, tugas, uas);
     cetakTab(myTab);
 
+
+    printf("\nBanyak nilai terdekat (terkecil) = %d\n", jarakTerkecil(myTab));
+
     return 0;
 }
 
@@ -83,11 +88,19 @@ void createData(TabNilai *T) {
     srand(time(NULL));
 
     for (i = 0; i < baris; i++) {
+        if ((*T).neffBaris < baris) {
+            (*T).neffBaris++;
+        }
         for (j = 0; j < kolom; j++) {
-            if (j == 4 || j == 5) {
+            if ((*T).neffKolom < kolom) {
+                (*T).neffKolom++;
+            }
+            if (j == 4) {
                 (*T).nilai[i][j] = 0;
-            } else if (j == 0){
+            } else if (j == 0) {
                 (*T).nilai[i][j] = i + 1;
+            } else if (j == 3){
+                (*T).nilai[i][j] = rand() % (90 - 70 + 1) + 70;
             } else {
                 (*T).nilai[i][j] = 10 + rand() % (95 - 10 + 1);
             }
@@ -97,16 +110,21 @@ void createData(TabNilai *T) {
 
 void cetakTab(TabNilai T) {
     // kamus lokal
-    int i, j;
+    int i, j, sum;
 
     // algoritma
-    T.neffBaris = baris;
-    T.neffKolom = kolom;
-
     printf("No\t| UTS\t| UAS\t| Tugas\t| K\t|Status\t|\n");
     for (i = 0; i < T.neffBaris; i++) {
         for (j = 0; j < T.neffKolom; j++) {
             printf(" %d\t|", T.nilai[i][j]);
+        }
+        sum = (T.nilai[i][1] + T.nilai[i][2] + T.nilai[i][3]) / 3;
+        if (sum > 80) {
+            printf(" A\t|");
+        } else if (sum > 70) {
+            printf(" B\t|");
+        } else {
+            printf(" C\t|");
         }
 
         printf("\n");
@@ -118,8 +136,25 @@ void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas) {
     int jarak, i;
 
     // algoritma
-    for (i = 0; i < baris; i++) {
+    for (i = 0; i < (*T).neffBaris; i++) {
         jarak = (uts - (*T).nilai[i][1]) + (uas - (*T).nilai[i][2]) + (tugas - (*T).nilai[i][3]);
         (*T).nilai[i][4] = jarak;
     }
+}
+
+int jarakTerkecil(TabNilai T) {
+    // kamus lokal
+    int K, i, sum;
+
+    // algoritma
+    sum = 0;
+    for (i = 0; i < T.neffBaris; i++) {
+        K = T.nilai[i][4];
+        if (K < T.nilai[i + 1][4]) {
+            sum = sum + 1;
+            printf("%d, ", K);
+        }
+    }
+
+    return sum;
 }
