@@ -32,11 +32,13 @@ void createData(TabNilai *T);
 
 void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas);
 
-int jarakTerkecil(TabNilai T);
+void UrutBubble(TabNilai *T);
+
+int jarakTerkecil(TabNilai T, int K);
 
 int main() {
     // kamus lokal
-    int uts, tugas, uas;
+    int uts, tugas, uas, K;
     TabNilai myTab;
 
 
@@ -48,9 +50,6 @@ int main() {
 
     printf("Tabel Data Nilai\n");
     cetakTab(myTab);
-
-    printf("\nStatus nilai: \n");
-    printf("80 = A\t70 = B\t60 = C\n");
 
     printf("\nMasukan Nilai UTS: ");
     scanf("%d", &uts);
@@ -65,8 +64,13 @@ int main() {
     jarakKedekatan(&myTab, uts, tugas, uas);
     cetakTab(myTab);
 
+    UrutBubble(&myTab);
 
-    printf("\nBanyak nilai terdekat (terkecil) = %d\n", jarakTerkecil(myTab));
+    printf("\n\nMasukan K: ");
+    scanf("%d", &K);
+//    jarakTerkecil(myTab, K);
+
+    printf("\nBanyak nilai terdekat (terkecil) = %d\n", jarakTerkecil(myTab, K));
 
     return 0;
 }
@@ -99,7 +103,7 @@ void createData(TabNilai *T) {
                 (*T).nilai[i][j] = 0;
             } else if (j == 0) {
                 (*T).nilai[i][j] = i + 1;
-            } else if (j == 3){
+            } else if (j == 3) {
                 (*T).nilai[i][j] = rand() % (90 - 70 + 1) + 70;
             } else {
                 (*T).nilai[i][j] = 10 + rand() % (95 - 10 + 1);
@@ -113,18 +117,18 @@ void cetakTab(TabNilai T) {
     int i, j, sum;
 
     // algoritma
-    printf("No\t| UTS\t| UAS\t| Tugas\t| K\t|Status\t|\n");
+    printf("No\t| UTS\t| UAS\t| Tugas\t| K\t| Kelas Data\t|\n");
     for (i = 0; i < T.neffBaris; i++) {
         for (j = 0; j < T.neffKolom; j++) {
             printf(" %d\t|", T.nilai[i][j]);
         }
         sum = (T.nilai[i][1] + T.nilai[i][2] + T.nilai[i][3]) / 3;
-        if (sum > 80) {
-            printf(" A\t|");
-        } else if (sum > 70) {
-            printf(" B\t|");
+        if (sum > 70) {
+            printf(" Baik\t\t|");
+        } else if (sum > 60) {
+            printf(" Cukup\t\t|");
         } else {
-            printf(" C\t|");
+            printf(" Buruk\t\t|");
         }
 
         printf("\n");
@@ -142,18 +146,37 @@ void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas) {
     }
 }
 
-int jarakTerkecil(TabNilai T) {
+void UrutBubble(TabNilai *T) {
+    // Kamus lokal
+    int i, j, tmp, N;
+
+    // Algoritma
+    N = (*T).neffBaris;
+
+    for(i=N; i>1; i--) {
+        for(j=1; j<i; j++) {
+            if((*T).nilai[j-1][4] > (*T).nilai[j][4]) {
+                tmp = (*T).nilai[j-1][4];
+                (*T).nilai[j-1][4] = (*T).nilai[j][4];
+                (*T).nilai[j][4] = tmp;
+            }
+        }
+    }
+
+    for(i=0; i < (*T).neffBaris; i++) {
+        printf("%d ", (*T).nilai[i][4]);
+    }
+}
+
+int jarakTerkecil(TabNilai T, int K) {
     // kamus lokal
-    int K, i, sum;
+    int i, sum;
 
     // algoritma
     sum = 0;
-    for (i = 0; i < T.neffBaris; i++) {
-        K = T.nilai[i][4];
-        if (K < T.nilai[i + 1][4]) {
-            sum = sum + 1;
-            printf("%d, ", K);
-        }
+    for (i = 0; i < K; i++) {
+        sum = sum + 1;
+        printf("%d ", T.nilai[i][4]);
     }
 
     return sum;
