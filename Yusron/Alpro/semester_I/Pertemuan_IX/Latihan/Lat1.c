@@ -50,10 +50,10 @@ int main()
     scanf("%d", &N);
 
     if(cariBiner(myTab, N)) {
-        printf("Biner = %d", N);
+        printf("Elemen ada di indeks %d", N);
     
     } else {
-        printf("Biner = 0");
+        printf("Elemen ada di indeks 0");
     }
 
     printf("\n\n");
@@ -98,19 +98,24 @@ void insertSort(TabInt *T) {
 }
 
 int cariBiner(TabInt T, int x) {
-    boolean ketemu;
-    int i;
+    int low = 0;
+    int high = x - 1;
 
-    ketemu = false;
-    i = 1;
-    while (i <= T.neff && !ketemu) {
-        if(T.Tb[i] % 2 == 0) {
-            ketemu = true;
+    while(low <= high) {
+        int mid = low + (high - low) / 2;
         
-        } else {
-            i++;
+        if(T.Tb[mid] == x) {
+            return mid;
+        }
+
+        if(T.Tb[mid] < x) {
+            low = mid + 1;
+        }
+
+        else {
+            high = mid - 1;
         }
     }
-    
-    return ketemu;
+
+    return -1;
 }
