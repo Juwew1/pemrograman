@@ -21,7 +21,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55fee5cc-0e44-45f4-8feb-8ee39d2b68eb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/test/InsertionSortTest.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ProyekBesar/yasir/TugasBesar2023/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ProyekBesar/yasir/TugasBesar2023/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ProyekBesar/yasir/TugasBesar2023/cmake-build-debug/TugasBesar2023.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ProyekBesar/yasir/TugasBesar2023/cmake-build-debug/TugasBesar2023.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InsertionSort.c" beforeDir="false" afterPath="$PROJECT_DIR$/InsertionSort.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InsertionSort.exe" beforeDir="false" afterPath="$PROJECT_DIR$/InsertionSort.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,28 +53,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;C/C++ File.InsertionSort.c.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.InsertionSort.c.executor": "Run",
+    "C/C++ File.InsertionSortTest.c.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan9/test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="C/C++ File.InsertionSort.c">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Documents\pemrograman\yasir\algoritmaDanPemrograman\semester1\pertemuan9\test\" />
+    </key>
+  </component>
+  <component name="RunManager" selected="C/C++ File.InsertionSortTest.c">
     <configuration name="pertemuan9" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pertemuan9" TARGET_NAME="pertemuan9" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pertemuan9" RUN_TARGET_NAME="pertemuan9">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsertionSortTest.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pertemuan9" TARGET_NAME="InsertionSortTest.c" CONFIG_NAME="InsertionSortTest.c">
+      <option name="sourceFile" value="test\InsertionSortTest.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="InsertionSort.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pertemuan9" TARGET_NAME="InsertionSort.c" CONFIG_NAME="InsertionSort.c">
@@ -80,6 +98,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="C/C++ File.InsertionSortTest.c" />
         <item itemvalue="C/C++ File.InsertionSort.c" />
       </list>
     </recent_temporary>
@@ -95,6 +114,7 @@
       <workItem from="1702298137137" duration="747000" />
       <workItem from="1702298892633" duration="1004000" />
       <workItem from="1702363009471" duration="689000" />
+      <workItem from="1702941280321" duration="2372000" />
     </task>
     <servers />
   </component>

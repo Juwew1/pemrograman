@@ -34,7 +34,7 @@ void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas);
 
 void UrutBubble(TabNilai *T);
 
-int jarakTerkecil(TabNilai T, int K);
+void jarakTerkecil(TabNilai T, int K);
 
 int main() {
     // kamus lokal
@@ -64,13 +64,15 @@ int main() {
     jarakKedekatan(&myTab, uts, tugas, uas);
     cetakTab(myTab);
 
+    printf("\n\n");
     UrutBubble(&myTab);
+    printf("\n\n");
+    cetakTab(myTab);
 
     printf("\n\nMasukan K: ");
     scanf("%d", &K);
-//    jarakTerkecil(myTab, K);
 
-    printf("\nBanyak nilai terdekat (terkecil) = %d\n", jarakTerkecil(myTab, K));
+    jarakTerkecil(myTab, K);
 
     return 0;
 }
@@ -153,31 +155,57 @@ void UrutBubble(TabNilai *T) {
     // Algoritma
     N = (*T).neffBaris;
 
-    for(i=N; i>1; i--) {
-        for(j=1; j<i; j++) {
-            if((*T).nilai[j-1][4] > (*T).nilai[j][4]) {
-                tmp = (*T).nilai[j-1][4];
-                (*T).nilai[j-1][4] = (*T).nilai[j][4];
-                (*T).nilai[j][4] = tmp;
+    for (i = N; i > 1; i--) {
+        for (j = 1; j < i; j++) {
+            // Compare the classes (baik, cukup, buruk) instead of distances
+            int classA = (*T).nilai[j - 1][4];
+            int classB = (*T).nilai[j][4];
+
+            if (classA > classB) {
+                // Swap the entire rows
+                for (int k = 0; k < kolom + 1; k++) {
+                    tmp = (*T).nilai[j - 1][k];
+                    (*T).nilai[j - 1][k] = (*T).nilai[j][k];
+                    (*T).nilai[j][k] = tmp;
+                }
             }
         }
     }
 
-    for(i=0; i < (*T).neffBaris; i++) {
+    // Print the sorted classes
+    for (i = 0; i < (*T).neffBaris; i++) {
         printf("%d ", (*T).nilai[i][4]);
     }
 }
 
-int jarakTerkecil(TabNilai T, int K) {
+void jarakTerkecil(TabNilai T, int K) {
     // kamus lokal
-    int i, sum;
+    int i, rataRata;
+    int baik, cukup, buruk;
 
     // algoritma
-    sum = 0;
+    baik = 0;
+    cukup = 0;
+    buruk = 0;
+
     for (i = 0; i < K; i++) {
-        sum = sum + 1;
-        printf("%d ", T.nilai[i][4]);
+        rataRata = (T.nilai[i][1] + T.nilai[i][2] + T.nilai[i][3]) / 3;
+        if (rataRata > 70) {
+            baik = baik + 1;
+        } else if (rataRata > 60) {
+            cukup = cukup + 1;
+        } else {
+            buruk = buruk + 1;
+        }
     }
 
-    return sum;
+    if (baik > cukup && baik > buruk) {
+        printf("\nBaik");
+    } else if (cukup > baik && cukup > buruk) {
+        printf("\nCukup");
+    } else if (buruk > baik && buruk > cukup) {
+        printf("\nBuruk");
+    } else {
+        printf("Data tidak valid");
+    }
 }

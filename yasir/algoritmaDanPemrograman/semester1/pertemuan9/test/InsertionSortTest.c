@@ -1,5 +1,5 @@
 /**
- * Program: InsertionSort.c
+ * Program: InsertionSortTest.c
  * Author: 2350081004/Muhamad Yasir Noval
  * Date: ..........................
  * Description: ...................
@@ -24,10 +24,12 @@ void cetakTab(TabInt T);
 
 void insertSort(TabInt *T);
 
+int CariBiner(TabInt T, int index, int x);
+
 int main() {
     // Kamus
     TabInt M;
-    int N;
+    int N, X, index;
 
     // Algoritma
     createTab(&M);
@@ -43,6 +45,17 @@ int main() {
     cetakTab(M);
     insertSort(&M);
     cetakTab(M);
+
+    printf("\nMasukan nilai X: ");
+    scanf("%d", &X);
+
+    index = CariBiner(M, M.neff, X);
+
+    if (index != -1) {
+        printf("\nData ditemukan pada indeks %d", index);
+    } else {
+        printf("\nData tidak ditemukan index %d", 0);
+    }
 
     return 0;
 }
@@ -81,4 +94,28 @@ void insertSort(TabInt *T) {
 
         (*T).Tb[j + 1] = idx;
     }
+}
+
+int CariBiner(TabInt T, int index, int x) {
+    // kamus lokal
+    int low = 0;
+    int high = index - 1;
+
+    while (low <= high) {
+        int mid = (low + high) / 2;
+
+        if (T.Tb[mid] == x) {
+            return mid;
+        } else if (T.Tb[mid] < x) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+
+    return -1;
+}
+
+void DelBil(TabInt T) {
+
 }
