@@ -26,6 +26,8 @@ void insertSort(TabInt *T);
 
 int CariBiner(TabInt T, int index, int x);
 
+void DelBil(TabInt *T, int x);
+
 int main() {
     // Kamus
     TabInt M;
@@ -52,10 +54,12 @@ int main() {
     index = CariBiner(M, M.neff, X);
 
     if (index != -1) {
-        printf("\nData ditemukan pada indeks %d", index);
+        printf("\nData ditemukan pada indeks %d\n\n", index);
     } else {
-        printf("\nData tidak ditemukan index %d", 0);
+        printf("\nData tidak ditemukan index %d\n\n", 0);
     }
+
+    DelBil(&M, X);
 
     return 0;
 }
@@ -116,6 +120,23 @@ int CariBiner(TabInt T, int index, int x) {
     return -1;
 }
 
-void DelBil(TabInt T) {
+void DelBil(TabInt *T, int x) {
+    // kamus lokal
+    int i, index, data;
 
+    // algoritma
+    index = (*T).neff;
+
+    // mencari bilangan
+    data = CariBiner((*T), index, x);
+
+    if (data != 0) {
+        for (i = data + 1; i <= (*T).neff; i++) {
+            (*T).Tb[i - 1] = (*T).Tb[i];
+        }
+        (*T).neff = (*T).neff - 1;
+        cetakTab((*T));
+    } else {
+        printf("Data tidak ditemukan penghapusan tidak dapat dilakukan");
+    }
 }

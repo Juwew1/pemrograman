@@ -1,8 +1,9 @@
 /**
  * Program: InsertionSort.c
  * Author: 2350081004/Muhamad Yasir Noval
- * Date: ..........................
- * Description: ...................
+ * Date: 22 Desember 2023
+ * Description: pengurutan data menggunakan insertion
+ * sort
  */
 
 #include <stdio.h>
@@ -40,7 +41,10 @@ int main() {
         scanf("%d", &N);
     }
 
+    printf("\nTabel sebelum terurut\n");
     cetakTab(M);
+
+    printf("\nTabel setelah terurut\n");
     insertSort(&M);
     cetakTab(M);
 
