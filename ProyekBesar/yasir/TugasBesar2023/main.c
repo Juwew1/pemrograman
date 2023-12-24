@@ -32,7 +32,7 @@ void createData(TabNilai *T);
 
 void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas);
 
-void UrutBubble(TabNilai *T);
+void PengurutanData(TabNilai *T);
 
 void jarakTerkecil(TabNilai T, int K);
 
@@ -46,7 +46,7 @@ int main() {
     createTab(&myTab);
     createData(&myTab);
 
-    printf("\tPROGRAM PREDIKSI KELAS DATA\n");
+    printf("\n\tPROGRAM PREDIKSI KELAS DATA\n");
 
     printf("Tabel Data Nilai\n");
     cetakTab(myTab);
@@ -64,14 +64,12 @@ int main() {
     jarakKedekatan(&myTab, uts, tugas, uas);
     cetakTab(myTab);
 
-    printf("\n\n");
-    UrutBubble(&myTab);
-    printf("\n\n");
-    cetakTab(myTab);
+    PengurutanData(&myTab);
 
     printf("\n\nMasukan K: ");
     scanf("%d", &K);
 
+    printf("\nMahasiswa tersebut mendapatkan nilai: ");
     jarakTerkecil(myTab, K);
 
     return 0;
@@ -148,7 +146,7 @@ void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas) {
     }
 }
 
-void UrutBubble(TabNilai *T) {
+void PengurutanData(TabNilai *T) {
     // Kamus lokal
     int i, j, tmp, N;
 
@@ -170,11 +168,6 @@ void UrutBubble(TabNilai *T) {
                 }
             }
         }
-    }
-
-    // Print the sorted classes
-    for (i = 0; i < (*T).neffBaris; i++) {
-        printf("%d ", (*T).nilai[i][4]);
     }
 }
 
@@ -200,11 +193,11 @@ void jarakTerkecil(TabNilai T, int K) {
     }
 
     if (baik > cukup && baik > buruk) {
-        printf("\nBaik");
+        printf("Baik");
     } else if (cukup > baik && cukup > buruk) {
-        printf("\nCukup");
+        printf("Cukup");
     } else if (buruk > baik && buruk > cukup) {
-        printf("\nBuruk");
+        printf("Buruk");
     } else {
         printf("Data tidak valid");
     }
