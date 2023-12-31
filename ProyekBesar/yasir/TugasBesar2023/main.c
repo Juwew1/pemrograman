@@ -21,70 +21,120 @@ typedef struct {
     int nilai[baris + 1][kolom + 1];
     int neffBaris;
     int neffKolom;
-} TabNilai;
+} TabNilaiLama;
+
+typedef struct {
+    int nilai[baris + 1][kolom + 1];
+    int neffBaris;
+    int neffKolom;
+} TabNilaiBaru;
 
 // prototype
-void createTab(TabNilai *T);
+void createTab(TabNilaiLama *TLama, TabNilaiBaru *TBaru);
 
-void cetakTab(TabNilai T);
+void cetakTab(TabNilaiLama T);
 
-void createData(TabNilai *T);
+void cetakTabBaru(TabNilaiBaru T);
 
-void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas);
+void AddNilai(TabNilaiBaru *TBaru, int uts, int tugas, int uas);
 
-void PengurutanData(TabNilai *T);
+void createData(TabNilaiLama *TLama);
 
-void jarakTerkecil(TabNilai T, int K);
+int CekJarak(TabNilaiLama *TLama, TabNilaiBaru *TBaru);
+
+void UrutDataAscending(TabNilaiLama *TLama);
+
+void CekLabel(TabNilaiLama T, int K);
 
 int main() {
     // kamus lokal
-    int uts, tugas, uas, K;
-    TabNilai myTab;
+    int uts, tugas, uas, K, N;
+    TabNilaiLama tabNilaiLama;
+    TabNilaiBaru tabNilaiBaru;
 
 
     // algoritma
-    createTab(&myTab);
-    createData(&myTab);
+    createTab(&tabNilaiLama, &tabNilaiBaru);
+    createData(&tabNilaiLama);
 
     printf("\n\tPROGRAM PREDIKSI KELAS DATA\n");
 
     printf("Tabel Data Nilai\n");
-    cetakTab(myTab);
+    cetakTab(tabNilaiLama);
 
-    printf("\nMasukan Nilai UTS: ");
-    scanf("%d", &uts);
+    N = 1;
+    while (N != 0) {
+        printf("\nMasukan Nilai UTS: ");
+        scanf("%d", &uts);
 
-    printf("Masukan Nilai Tugas: ");
-    scanf("%d", &tugas);
+        printf("Masukan Nilai Tugas: ");
+        scanf("%d", &tugas);
 
-    printf("Masukan Nilai UAS: ");
-    scanf("%d", &uas);
+        printf("Masukan Nilai UAS: ");
+        scanf("%d", &uas);
 
-    printf("\n\nTabel Data Nilai\n");
-    jarakKedekatan(&myTab, uts, tugas, uas);
-    cetakTab(myTab);
+        AddNilai(&tabNilaiBaru, uts, tugas, uas);
 
-    PengurutanData(&myTab);
+        printf("\napakah anda ingin menambah nilai lagi? [1/0]: ");
+        scanf("%d", &N);
+    }
+
+    printf("\nTabel Data Nilai Baru\n");
+    cetakTabBaru(tabNilaiBaru);
+
+    printf("\n\nTabel Data Nilai Lama\n");
+    CekJarak(&tabNilaiLama, &tabNilaiBaru);
+    cetakTab(tabNilaiLama);
+
+    UrutDataAscending(&tabNilaiLama);
 
     printf("\n\nMasukan K: ");
     scanf("%d", &K);
 
     printf("\nMahasiswa tersebut mendapatkan nilai: ");
-    jarakTerkecil(myTab, K);
+    CekLabel(tabNilaiLama, K);
 
     return 0;
 }
 
 // body of prototype
-void createTab(TabNilai *T) {
+void createTab(TabNilaiLama *TLama, TabNilaiBaru *TBaru) {
     // kamus lokal
 
     // algoritma
-    (*T).neffBaris = 0;
-    (*T).neffKolom = 0;
+    (*TLama).neffBaris = 0;
+    (*TLama).neffKolom = 0;
+
+    (*TBaru).neffBaris = 0;
+    (*TBaru).neffKolom = 0;
 }
 
-void createData(TabNilai *T) {
+void AddNilai(TabNilaiBaru *TBaru, int uts, int tugas, int uas) {
+    // kamus lokal
+    int i;
+
+    // algoritma
+    (*TBaru).neffKolom = kolom;
+
+    if ((*TBaru).neffBaris < baris) {
+        (*TBaru).neffBaris++;
+        for (i = 0; i <= kolom; i++) {
+            if ((*TBaru).neffKolom <= kolom) {
+                if (i == 0) {
+                    (*TBaru).nilai[(*TBaru).neffBaris][i] = (*TBaru).neffBaris;
+                } else if (i == 1) {
+                    (*TBaru).nilai[(*TBaru).neffBaris][i] = uts;
+                } else if (i == 2) {
+                    (*TBaru).nilai[(*TBaru).neffBaris][i] = tugas;
+                } else if (i == 3) {
+                    (*TBaru).nilai[(*TBaru).neffBaris][i] = uas;
+                }
+            }
+        }
+    }
+}
+
+void createData(TabNilaiLama *TLama) {
     // kamus lokal
     int i, j;
 
@@ -92,32 +142,33 @@ void createData(TabNilai *T) {
     srand(time(NULL));
 
     for (i = 0; i < baris; i++) {
-        if ((*T).neffBaris < baris) {
-            (*T).neffBaris++;
+        if ((*TLama).neffBaris < baris) {
+            (*TLama).neffBaris++;
         }
         for (j = 0; j < kolom; j++) {
-            if ((*T).neffKolom < kolom) {
-                (*T).neffKolom++;
+            if ((*TLama).neffKolom < kolom) {
+                (*TLama).neffKolom++;
             }
-            if (j == 4) {
-                (*T).nilai[i][j] = 0;
-            } else if (j == 0) {
-                (*T).nilai[i][j] = i + 1;
-            } else if (j == 3) {
-                (*T).nilai[i][j] = rand() % (90 - 70 + 1) + 70;
+
+            if (j == 0) {
+                (*TLama).nilai[i][j] = i + 1;
+            } else if (j == 2) {
+                (*TLama).nilai[i][j] = rand() % (90 - 70 + 1) + 70;
+            } else if (j == 4) {
+                (*TLama).nilai[i][j] = 0;
             } else {
-                (*T).nilai[i][j] = 10 + rand() % (95 - 10 + 1);
+                (*TLama).nilai[i][j] = 10 + rand() % (95 - 10 + 1);
             }
         }
     }
 }
 
-void cetakTab(TabNilai T) {
+void cetakTab(TabNilaiLama T) {
     // kamus lokal
     int i, j, sum;
 
     // algoritma
-    printf("No\t| UTS\t| UAS\t| Tugas\t| K\t| Kelas Data\t|\n");
+    printf("No\t| UTS\t| Tugas\t| UAS\t| K\t| Kelas Data\t|\n");
     for (i = 0; i < T.neffBaris; i++) {
         for (j = 0; j < T.neffKolom; j++) {
             printf(" %d\t|", T.nilai[i][j]);
@@ -135,43 +186,63 @@ void cetakTab(TabNilai T) {
     }
 }
 
-void jarakKedekatan(TabNilai *T, int uts, int tugas, int uas) {
+void cetakTabBaru(TabNilaiBaru T) {
     // kamus lokal
-    int jarak, i;
+    int i, j;
+
 
     // algoritma
-    for (i = 0; i < (*T).neffBaris; i++) {
-        jarak = (uts - (*T).nilai[i][1]) + (uas - (*T).nilai[i][2]) + (tugas - (*T).nilai[i][3]);
-        (*T).nilai[i][4] = jarak;
+    printf("No\t| UTS\t| Tugas\t| UAS\t|\n");
+    for (i = 1; i <= T.neffBaris; i++) {
+        for (j = 0; j < T.neffKolom - 1; j++) {
+            printf(" %d\t|", T.nilai[i][j]);
+        }
+
+        printf("\n");
     }
 }
 
-void PengurutanData(TabNilai *T) {
+int CekJarak(TabNilaiLama *TLama, TabNilaiBaru *TBaru) {
+    // kamus lokal
+    int jarak, i, j;
+
+    // algoritma
+    for (j = 1; j <= (*TBaru).neffBaris; j++) {
+        for (i = 0; i < (*TLama).neffBaris; i++) {
+            jarak = ((*TBaru).nilai[j][1] - (*TLama).nilai[i][1]) + ((*TBaru).nilai[j][2] - (*TLama).nilai[i][2]) +
+                    ((*TBaru).nilai[j][3] - (*TLama).nilai[i][3]);
+            (*TLama).nilai[i][4] = jarak;
+        }
+    }
+    return (*TLama).nilai[i][4];
+}
+
+void UrutDataAscending(TabNilaiLama *TLama) {
     // Kamus lokal
     int i, j, tmp, N;
 
     // Algoritma
-    N = (*T).neffBaris;
+    N = (*TLama).neffBaris;
 
     for (i = N; i > 1; i--) {
         for (j = 1; j < i; j++) {
             // Compare the classes (baik, cukup, buruk) instead of distances
-            int classA = (*T).nilai[j - 1][4];
-            int classB = (*T).nilai[j][4];
+            int classA = (*TLama).nilai[j - 1][4];
+            int classB = (*TLama).nilai[j][4];
 
             if (classA > classB) {
                 // Swap the entire rows
                 for (int k = 0; k < kolom + 1; k++) {
-                    tmp = (*T).nilai[j - 1][k];
-                    (*T).nilai[j - 1][k] = (*T).nilai[j][k];
-                    (*T).nilai[j][k] = tmp;
+                    tmp = (*TLama).nilai[j - 1][k];
+                    (*TLama).nilai[j - 1][k] = (*TLama).nilai[j][k];
+                    (*TLama).nilai[j][k] = tmp;
                 }
             }
         }
     }
 }
 
-void jarakTerkecil(TabNilai T, int K) {
+void CekLabel(TabNilaiLama T, int K) {
     // kamus lokal
     int i, rataRata;
     int baik, cukup, buruk;
@@ -181,7 +252,7 @@ void jarakTerkecil(TabNilai T, int K) {
     cukup = 0;
     buruk = 0;
 
-    for (i = 0; i < K; i++) {
+    for (i = 1; i <= K; i++) {
         rataRata = (T.nilai[i][1] + T.nilai[i][2] + T.nilai[i][3]) / 3;
         if (rataRata > 70) {
             baik = baik + 1;

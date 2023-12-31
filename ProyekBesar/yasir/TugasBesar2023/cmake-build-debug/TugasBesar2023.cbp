@@ -79,6 +79,9 @@
 		<Unit filename="E:/Documents/pemrograman/ProyekBesar/yasir/TugasBesar2023/main.c">
 			<Option target="TugasBesar2023"/>
 		</Unit>
+		<Unit filename="E:/Documents/pemrograman/ProyekBesar/yasir/TugasBesar2023/test/pointf5.c">
+			<Option target="TugasBesar2023"/>
+		</Unit>
 		<Unit filename="E:/Documents/pemrograman/ProyekBesar/yasir/TugasBesar2023/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -152,6 +152,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TugasBesar2023.dir\build.make CMakeFiles/TugasBesar2023.dir/main.c.s
 .PHONY : main.c.s
 
+test/pointf5.obj: test/pointf5.c.obj
+.PHONY : test/pointf5.obj
+
+# target to build an object file
+test/pointf5.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TugasBesar2023.dir\build.make CMakeFiles/TugasBesar2023.dir/test/pointf5.c.obj
+.PHONY : test/pointf5.c.obj
+
+test/pointf5.i: test/pointf5.c.i
+.PHONY : test/pointf5.i
+
+# target to preprocess a source file
+test/pointf5.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TugasBesar2023.dir\build.make CMakeFiles/TugasBesar2023.dir/test/pointf5.c.i
+.PHONY : test/pointf5.c.i
+
+test/pointf5.s: test/pointf5.c.s
+.PHONY : test/pointf5.s
+
+# target to generate assembly for a file
+test/pointf5.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TugasBesar2023.dir\build.make CMakeFiles/TugasBesar2023.dir/test/pointf5.c.s
+.PHONY : test/pointf5.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +188,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... test/pointf5.obj
+	@echo ... test/pointf5.i
+	@echo ... test/pointf5.s
 .PHONY : help
 
 

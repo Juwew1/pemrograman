@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TugasBesar2023.dir/main.c.obj"
   "CMakeFiles/TugasBesar2023.dir/main.c.obj.d"
+  "CMakeFiles/TugasBesar2023.dir/test/pointf5.c.obj"
+  "CMakeFiles/TugasBesar2023.dir/test/pointf5.c.obj.d"
   "TugasBesar2023.exe"
   "TugasBesar2023.exe.manifest"
   "TugasBesar2023.pdb"

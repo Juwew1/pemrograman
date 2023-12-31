@@ -305,21 +305,6 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "D:/program installer/JetbrainsToolbox/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindCodeBlocks.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "D:/program installer/JetbrainsToolbox/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "D:/program installer/JetbrainsToolbox/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/ProcessorCount.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
 			"path" : "D:/program installer/JetbrainsToolbox/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake"
 		},
 		{
@@ -454,8 +439,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "E:/Documents/pemrograman/ProyekBesar/yasir/TugasBesar2023/cmake-build-debug",
-		"source" : "E:/Documents/pemrograman/ProyekBesar/yasir/TugasBesar2023"
+		"build" : "E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan5/cmake-build-debug",
+		"source" : "E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan5"
 	},
 	"version" : 
 	{

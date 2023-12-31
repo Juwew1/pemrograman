@@ -3,4 +3,5 @@ project(TugasBesar2023 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(TugasBesar2023 main.c)
+add_executable(TugasBesar2023 main.c
+        test/pointf5.c)

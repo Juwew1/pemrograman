@@ -29,6 +29,8 @@ CMakeFiles/TugasBesar2023.dir/main.c.obj: E:/Documents/pemrograman/ProyekBesar/y
   D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/time.h \
   D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/vadefs.h
 
+CMakeFiles/TugasBesar2023.dir/test/pointf5.c.obj: E:/Documents/pemrograman/ProyekBesar/yasir/TugasBesar2023/test/pointf5.c
+
 
 D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h:
 
@@ -83,3 +85,5 @@ D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw
 D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/time.h:
 
 D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/vadefs.h:
+
+E:/Documents/pemrograman/ProyekBesar/yasir/TugasBesar2023/test/pointf5.c:
