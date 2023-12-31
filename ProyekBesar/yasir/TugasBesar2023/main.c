@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 #define baris 10
@@ -40,7 +41,7 @@ void AddNilai(TabNilaiBaru *TBaru, int uts, int tugas, int uas);
 
 void createData(TabNilaiLama *TLama);
 
-int CekJarak(TabNilaiLama *TLama, TabNilaiBaru *TBaru);
+void CekJarak(TabNilaiLama *TLama, TabNilaiBaru *TBaru, int K);
 
 void UrutDataAscending(TabNilaiLama *TLama);
 
@@ -82,17 +83,11 @@ int main() {
     printf("\nTabel Data Nilai Baru\n");
     cetakTabBaru(tabNilaiBaru);
 
-    printf("\n\nTabel Data Nilai Lama\n");
-    CekJarak(&tabNilaiLama, &tabNilaiBaru);
-    cetakTab(tabNilaiLama);
-
-    UrutDataAscending(&tabNilaiLama);
-
     printf("\n\nMasukan K: ");
     scanf("%d", &K);
 
-    printf("\nMahasiswa tersebut mendapatkan nilai: ");
-    CekLabel(tabNilaiLama, K);
+    printf("\n\nTabel Data Nilai\n");
+    CekJarak(&tabNilaiLama, &tabNilaiBaru, K);
 
     return 0;
 }
@@ -202,7 +197,7 @@ void cetakTabBaru(TabNilaiBaru T) {
     }
 }
 
-int CekJarak(TabNilaiLama *TLama, TabNilaiBaru *TBaru) {
+void CekJarak(TabNilaiLama *TLama, TabNilaiBaru *TBaru, int K) {
     // kamus lokal
     int jarak, i, j;
 
@@ -213,8 +208,17 @@ int CekJarak(TabNilaiLama *TLama, TabNilaiBaru *TBaru) {
                     ((*TBaru).nilai[j][3] - (*TLama).nilai[i][3]);
             (*TLama).nilai[i][4] = jarak;
         }
+
+        UrutDataAscending(TLama);
+        printf("\n");
+        cetakTab(*TLama);
+        printf("\n");
+
+        printf("Mahasiswa ke-%d mendapatkan nilai: ", j);
+        CekLabel(*TLama, K);
+        printf("\n");
+
     }
-    return (*TLama).nilai[i][4];
 }
 
 void UrutDataAscending(TabNilaiLama *TLama) {

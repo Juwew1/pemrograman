@@ -21,6 +21,8 @@ CMakeFiles/TugasBesar2023.dir/main.c.obj: \
  D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
  D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
  D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/errno.h \
+ D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/string.h \
+ D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
  D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/time.h \
  D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sys/timeb.h \
  D:/program\ installer/JetbrainsToolbox/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
