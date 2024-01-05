@@ -1,0 +1,3 @@
+D:/pemrograman/ProyekBesar/yasir/AplikasiKasirSederhana/cmake-build-debug/CMakeFiles/AplikasiKasirSederhana.dir
+D:/pemrograman/ProyekBesar/yasir/AplikasiKasirSederhana/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/pemrograman/ProyekBesar/yasir/AplikasiKasirSederhana/cmake-build-debug/CMakeFiles/rebuild_cache.dir
