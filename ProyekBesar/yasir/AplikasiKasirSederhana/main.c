@@ -7,42 +7,140 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <windows.system.h>
+
+#define MAX_BARANG 100
+
+typedef struct {
+    char kode[10];
+    char nama[50];
+    int stok;
+    double harga;
+} Barang;
+
+void tambahStok(Barang *barang, int jumlah);
+
+void kurangiStok(Barang *barang, int jumlah);
+
+Barang *cariBarangByKode(Barang *daftarBarang, int jumlahBarang, const char *kode);
+
+Barang *cariBarangByNama(Barang *daftarBarang, int jumlahBarang, const char *nama);
+
+double hitungTotalHarga(Barang *barang, int jumlahBeli);
+
+double hitungKembalian(double totalHarga, double uangDibayar);
+
+void tampilkanDaftarBarang(Barang *daftarBarang, int jumlahBarang);
 
 int main() {
-    // kamus
-    char kodeBarang[11][5] = {
-            "N001", "N002", "M001", "M002", "G001", "G002", "G003", "D001", "D002", "D003", "D004"
+    Barang daftarBarang[MAX_BARANG] = {
+            {"A001", "Beras",  50, 10000.0},
+            {"A002", "Gula",   30, 12000.0},
+            {"A003", "Minyak", 25, 13000.0},
+            {"A004", "Sarden", 45, 15000.0},
+            {"A005", "Telur",  34, 3000.0},
+            {"A006", "Snack",  20, 4000.0},
+            {"A007", "Kopi",   25, 2000.0},
+            {"A008", "Teh",    33, 1500.0},
+            {"A009", "Mie",    78, 13000.0},
     };
 
-    char namaBarang[11][50] = {
-            "Nasi putih", "Nasi Merah", "Minyak Goreng", "Minyak Kelapa", "Gula pasir", "Gula Merah", "Gula Tebu",
-            "Daging Ayam", "Dagin Sapi", "Daging Kambing", "Daging Babi"
-    };
+    int jumlahBarang = 9; // Jumlah data barang yang ada
 
-    int stok[] = {
-            10, 20, 30, 30, 50, 60, 34, 234, 555, 45, 10,
-    };
+    int selesai = 0;
+    while (!selesai) {
+        // Menampilkan daftar barang
+        tampilkanDaftarBarang(daftarBarang, jumlahBarang);
 
-    int harga[] = {
-            12000, 15000, 7500, 9000, 2500, 3400, 5400, 40000, 60000, 55000, 60000
-    };
+        // Contoh penggunaan aplikasi kasir
+        char kodeA[10], kodeB[10];
+        printf("Masukkan kode barang A: ");
+        scanf("%s", kodeA);
+        printf("Masukkan kode barang B: ");
+        scanf("%s", kodeB);
 
-    int i, j, k;
+        Barang *barangA = cariBarangByKode(daftarBarang, jumlahBarang, kodeA);
+        Barang *barangB = cariBarangByKode(daftarBarang, jumlahBarang, kodeB);
 
-    // algoritma
-    printf("\tAPLIKASI KASIR SEDERHANA");
-    printf("\n");
-    printf("\nTabel Produk\n");
-    printf("No\t| Kode Barang\t| Nama Barang\t| Stok Barang\t| Harga Barang\t|\n");
+        if (barangA != NULL && barangB != NULL) {
+            // Memasukkan jumlah pembelian
+            int jumlahBeliA, jumlahBeliB;
+            printf("Masukkan jumlah pembelian %s: ", barangA->nama);
+            scanf("%d", &jumlahBeliA);
+            printf("Masukkan jumlah pembelian %s: ", barangB->nama);
+            scanf("%d", &jumlahBeliB);
 
-    for (i = 0; i < 11; i++) {
-        printf(" %d\t|", i + 1);
-        printf(" %s\t\t|", kodeBarang[i]);
-        printf("%s\t|", namaBarang[i]);
-        printf(" %d\t\t|", stok[i]);
-        printf(" Rp.%d\t|", harga[i]);
-        printf("\n");
+            // Menghitung total harga
+            double totalHargaA = hitungTotalHarga(barangA, jumlahBeliA);
+            double totalHargaB = hitungTotalHarga(barangB, jumlahBeliB);
+            double totalHarga = totalHargaA + totalHargaB;
+
+            printf("Total harga: %.2f\n", totalHarga);
+
+            // Memasukkan uang yang dibayar
+            double uangDibayar;
+            printf("Masukkan uang yang dibayar: ");
+            scanf("%lf", &uangDibayar);
+
+            // Menghitung kembalian
+            double kembalian = hitungKembalian(totalHarga, uangDibayar);
+            printf("Kembalian: %.2f\n", kembalian);
+
+            // Mengurangi stok barang
+            kurangiStok(barangA, jumlahBeliA);
+            kurangiStok(barangB, jumlahBeliB);
+
+            printf("Apakah ada transaksi lain? (1: Ya, 0: Tidak) ");
+            scanf("%d", &selesai);
+            system("cls");
+        } else {
+            printf("Barang tidak ditemukan.\n");
+        }
     }
 
     return 0;
+}
+
+void tambahStok(Barang *barang, int jumlah) {
+    barang->stok += jumlah;
+}
+
+void kurangiStok(Barang *barang, int jumlah) {
+    barang->stok -= jumlah;
+}
+
+Barang *cariBarangByKode(Barang *daftarBarang, int jumlahBarang, const char *kode) {
+    for (int i = 0; i < jumlahBarang; i++) {
+        if (strcmp(daftarBarang[i].kode, kode) == 0) {
+            return &daftarBarang[i];
+        }
+    }
+    return NULL;
+}
+
+Barang *cariBarangByNama(Barang *daftarBarang, int jumlahBarang, const char *nama) {
+    for (int i = 0; i < jumlahBarang; i++) {
+        if (strcmp(daftarBarang[i].nama, nama) == 0) {
+            return &daftarBarang[i];
+        }
+    }
+    return NULL;
+}
+
+double hitungTotalHarga(Barang *barang, int jumlahBeli) {
+    return barang->harga * jumlahBeli;
+}
+
+double hitungKembalian(double totalHarga, double uangDibayar) {
+    return uangDibayar - totalHarga;
+}
+
+void tampilkanDaftarBarang(Barang *daftarBarang, int jumlahBarang) {
+    printf("Daftar Barang:\n");
+    printf("Kode\t| Nama\t\t| Stok\t| Harga\n");
+    printf("-------------------------------------------\n");
+    for (int i = 0; i < jumlahBarang; i++) {
+        printf("%s   \t| %s   \t| %d\t| Rp.%.2f \n", daftarBarang[i].kode, daftarBarang[i].nama, daftarBarang[i].stok,
+               daftarBarang[i].harga);
+    }
 }

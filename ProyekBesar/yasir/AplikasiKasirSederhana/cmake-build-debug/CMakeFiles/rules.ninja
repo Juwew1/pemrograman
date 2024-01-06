@@ -17,7 +17,11 @@
 rule C_COMPILER__AplikasiKasirSederhana_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
+<<<<<<< HEAD
   command = ${LAUNCHER}${CODE_CHECK}"D:\program installer\JetbrainsToolbox\Programs\CLion\bin\mingw\bin\gcc.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+=======
+  command = ${LAUNCHER}${CODE_CHECK}C:\Users\aibnu\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+>>>>>>> d1680f1f8679de5acb190e9e321d5c555a6f3f1e
   description = Building C object $out
 
 
@@ -25,7 +29,11 @@ rule C_COMPILER__AplikasiKasirSederhana_unscanned_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__AplikasiKasirSederhana_Debug
+<<<<<<< HEAD
   command = cmd.exe /C "$PRE_LINK && "D:\program installer\JetbrainsToolbox\Programs\CLion\bin\mingw\bin\gcc.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+=======
+  command = cmd.exe /C "$PRE_LINK && C:\Users\aibnu\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+>>>>>>> d1680f1f8679de5acb190e9e321d5c555a6f3f1e
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -42,7 +50,11 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
+<<<<<<< HEAD
   command = "D:\program installer\JetbrainsToolbox\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SE:\Documents\pemrograman\ProyekBesar\yasir\AplikasiKasirSederhana -BE:\Documents\pemrograman\ProyekBesar\yasir\AplikasiKasirSederhana\cmake-build-debug
+=======
+  command = C:\Users\aibnu\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SD:\pemrograman\ProyekBesar\yasir\AplikasiKasirSederhana -BD:\pemrograman\ProyekBesar\yasir\AplikasiKasirSederhana\cmake-build-debug
+>>>>>>> d1680f1f8679de5acb190e9e321d5c555a6f3f1e
   description = Re-running CMake...
   generator = 1
 
@@ -51,7 +63,11 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
+<<<<<<< HEAD
   command = "D:\program installer\JetbrainsToolbox\Programs\CLion\bin\ninja\win\x64\ninja.exe" $FILE_ARG -t clean $TARGETS
+=======
+  command = C:\Users\aibnu\AppData\Local\Programs\CLion\bin\ninja\win\x64\ninja.exe $FILE_ARG -t clean $TARGETS
+>>>>>>> d1680f1f8679de5acb190e9e321d5c555a6f3f1e
   description = Cleaning all built files...
 
 
@@ -59,6 +75,10 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
+<<<<<<< HEAD
   command = "D:\program installer\JetbrainsToolbox\Programs\CLion\bin\ninja\win\x64\ninja.exe" -t targets
+=======
+  command = C:\Users\aibnu\AppData\Local\Programs\CLion\bin\ninja\win\x64\ninja.exe -t targets
+>>>>>>> d1680f1f8679de5acb190e9e321d5c555a6f3f1e
   description = All primary targets available:
 

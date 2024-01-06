@@ -1,4 +1,5 @@
 # ninja log v5
+<<<<<<< HEAD
 0	828	7259714725472624	CMakeFiles/AplikasiKasirSederhana.dir/main.c.obj	7a3a1be47f3c3a03
 851	1843	7259714735567373	AplikasiKasirSederhana.exe	1799900a3407f1d4
 3	643	7259743001095653	CMakeFiles/AplikasiKasirSederhana.dir/main.c.obj	7a3a1be47f3c3a03
@@ -27,3 +28,9 @@
 528	1464	7259749948014971	AplikasiKasirSederhana.exe	1799900a3407f1d4
 3	751	7259750659537096	CMakeFiles/AplikasiKasirSederhana.dir/main.c.obj	7a3a1be47f3c3a03
 751	1714	7259750668936454	AplikasiKasirSederhana.exe	1799900a3407f1d4
+=======
+0	2515	7261146722760180	CMakeFiles/AplikasiKasirSederhana.dir/main.c.obj	a55cad55dca40933
+2523	2873	7261146726233410	AplikasiKasirSederhana.exe	5f83ba1b0ae08d9c
+13	2540	7261150051342464	CMakeFiles/AplikasiKasirSederhana.dir/main.c.obj	a55cad55dca40933
+2541	2750	7261150053389426	AplikasiKasirSederhana.exe	5f83ba1b0ae08d9c
+>>>>>>> d1680f1f8679de5acb190e9e321d5c555a6f3f1e
