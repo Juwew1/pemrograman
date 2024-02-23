@@ -1,4 +1,4 @@
-# Install script for directory: D:/pemrograman/yasir/algoritmaDanPemrograman/semester1/latihan
+# Install script for directory: E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/latihan
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,11 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-<<<<<<< HEAD
-  set(CMAKE_OBJDUMP "C:/Users/aibnu/AppData/Local/Programs/CLion/bin/mingw/bin/objdump.exe")
-=======
   set(CMAKE_OBJDUMP "D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/objdump.exe")
->>>>>>> 8bca40e725f71574714001aa479b1e5f2b4f7736
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -49,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/pemrograman/yasir/algoritmaDanPemrograman/semester1/latihan/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/latihan/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
