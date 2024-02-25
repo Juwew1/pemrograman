@@ -48,58 +48,25 @@
     </div>
     <div class="col">
       <div class="container">
-        <h1 class="mt-4">Product</h1>
+        <h1 class="mt-4">Tambah Produk</h1>
         <hr>
-        <a href="addProducts.php" class="btn btn-success mt-5">Tambah Produk</a>
-        <table class="table table-striped mt-3">
-          <caption hidden>Tabel untuk menampilkan produk yang disimpan di database</caption>
-          <thead>
-          <tr>
-            <th>No</th>
-            <th>Gambar</th>
-            <th>Nama Produk</th>
-            <th>Jenis Produk</th>
-            <th>Stok</th>
-            <th>Harga</th>
-            <th>Harga Promo</th>
-            <th>Edit</th>
-          </tr>
-          </thead>
-          <tbody>
-<!--          Data yang disimpan disini akan di ambil dari
-                      data base. -->
-          <tr>
-            <td>1</td>
-            <td>-</td>
-            <td>Sari Roti</td>
-            <td>Makanan</td>
-            <td>300</td>
-            <td>Rp. 15,000</td>
-            <td>Rp. 12,500</td>
-            <td>
-              <a href="editProducts.php" class="btn btn-success">Edit</a>
-              <button class="btn btn-danger">Hapus</button>
-              <button class="btn btn-warning">Promo</button>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>-</td>
-            <td>Sari Roti</td>
-            <td>Makanan</td>
-            <td>300</td>
-            <td>Rp. 15,000</td>
-            <td>Rp. -</td>
-            <td>
-              <button class="btn btn-success">Edit</button>
-              <button class="btn btn-danger">Hapus</button>
-              <button class="btn btn-warning">Promo</button>
-            </td>
-          </tr>
-<!--          Data yang disimpan disini akan di ambil dari
-            data base. -->
-          </tbody>
-        </table>
+        <a href="product.php" class="btn btn-success mt-5">Kembali</a>
+        <div class="container mt-5">
+          <h3>Data produk :</h3>
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <form action="" method="post" enctype="multipart/form-data">
+                  <div class="mb-3 mt-4">
+                    <label for="name" class="form-label">Nama Produk :</label>
+                    <input type="text" name="name" id="name" class="form-control" required>
+                  </div>
+                </form>
+              </div>
+              <div class="col-8"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

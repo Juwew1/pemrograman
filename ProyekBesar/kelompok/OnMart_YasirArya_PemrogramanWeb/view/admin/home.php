@@ -122,8 +122,8 @@
               <div class="card-body">
                 <div class="container">
                   <p>Data terbaru yang ditambahkan</p>
-<!--                  Data yang disimpan disini akan di ambil dari
-                      data base. -->
+                  <!--                  Data yang disimpan disini akan di ambil dari
+                                        data base. -->
                   <div class="card">
                     <div class="card-body">
                       <div id="dataProduk">
@@ -153,21 +153,20 @@
               <div class="card-body">
                 <div class="container">
                   <p>Todo List</p>
+                  <button class="btn btn-info mb-5">Tambah List</button>
                   <div class="card">
                     <div class="card-body">
-                      <div id="Check">
-                        <label for="todo1"></label>
-                        <input type="checkbox" name="todo1" id="todo1"> menambah produk baru
-                      </div>
+                      <span>menambah produk baru</span>
+                      <button class="btn btn-danger float-end">Hapus</button>&nbsp;
+                      <button class="btn btn-success float-end">Selesai</button>
                     </div>
                   </div>
                   <br>
                   <div class="card">
                     <div class="card-body">
-                      <div id="Check">
-                        <label for="todo1"></label>
-                        <input type="checkbox" name="todo1" id="todo1"> produk 1 akan kadaluwarsa pada tanggal sekian
-                      </div>
+                      <span>produk 1 akan kadaluwarsa pada tanggal sekian</span>
+                      <button class="btn btn-danger float-end">Hapus</button>&nbsp;
+                      <button class="btn btn-success float-end">Selesai</button>
                     </div>
                   </div>
                 </div>
@@ -177,7 +176,11 @@
           <div class="col-3 col-sm-6 mt-3">
             <div class="card">
               <div class="card-header bg-primary text-white">Kalender</div>
-              <div class="card-body"></div>
+              <div class="card-body">
+                <iframe
+                  src="https://calendar.google.com/calendar/embed?src=a0b9f8603e991bc389572f2a7b3b276edda8bbf5ae8d4af76596364f6c86dfe0%40group.calendar.google.com&ctz=Asia%2FJakarta"
+                  style="border: 0" width="100%" height="670" frameborder="0" scrolling="no"></iframe>
+              </div>
             </div>
           </div>
         </div>

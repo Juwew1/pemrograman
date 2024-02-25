@@ -41,3 +41,9 @@ H
 css/adminButtonStyle.css,9\c\9cff683b11f379d4c464f0712bc4e5ad2f514d4d
 E
 css/bootstrap.min.css,0\f\0f647bba076518ea08e688ce23968f2b1bb22f7d
+K
+view/admin/detailOrders.php,b\2\b248e078ae3780f2d1c0f36f4877d421680126ee
+J
+view/admin/addProducts.php,c\a\caca610f96c9c572c50834cc480af14e9647e556
+K
+view/admin/editProducts.php,9\4\94586a07f7dda2d35378ab9acac4368fee21bf82
