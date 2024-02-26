@@ -54,28 +54,70 @@
         <div class="container mt-5">
           <h3>Data produk :</h3>
           <div class="container">
-            <div class="row">
-              <div class="col-4">
-                <form action="" method="post" enctype="multipart/form-data">
+            <form action="" method="post" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-4">
                   <div class="mb-3 mt-4">
-                    <label for="name" class="form-label">Nama Produk :</label>
-                    <input type="text" name="name" id="name" class="form-control" required>
+                    <label for="namaProduk" class="form-label">Nama Produk :</label>
+                    <input type="text" name="namaProduk" id="namaProduk" class="form-control" required>
                   </div>
-                </form>
+                  <div class="mb-3 mt-4">
+                    <label for="jenisProduk" class="form-label">Jenis Produk :</label>
+                    <select class="form-select mb-3" name="jenisProduk" id="jenisProduk">
+                      <option value="1" selected>Makanan</option>
+                      <option value="2">Minuman</option>
+                      <option value="3">Alat Rumah Tangga</option>
+                      <option value="4">Lain-lain</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 mt-4">
+                    <label for="stok" class="form-label">Stok Produk :</label>
+                    <input type="number" name="stok" id="stok" class="form-control" min="0" max="1000" required>
+                  </div>
+                  <div class="mb-3 mt-4">
+                    <label for="harga" class="form-label">Harga Produk :</label>
+                    <input type="number" name="harga" id="harga" class="form-control" min="0" required>
+                  </div>
+                  <div class="mb-3 mt-4">
+                    <label for="gambarProduk" class="form-label">Gambar Produk :</label>
+                    <input type="file" name="gambarProduk" id="gambarProduk" class="form-control" required>
+                  </div>
+                  <div class="mb-3 mt-4">
+                    <button type="submit" name="submit" class="btn btn-success">Simpan</button>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-5">
+                  <div class="mb-3 mt-4">
+                    <label for="kadaluwarsa" class="form-label">Tanggal Kadaluwarsa :</label>
+                    <input type="date" name="kadaluwarsa" id="kadaluwarsa" class="form-control" required>
+                  </div>
+                  <div class="mb-3 mt-4">
+                    <label for="stok" class="form-label">- :</label>
+                    <input type="number" name="stok" id="stok" class="form-control" min="0" max="1000" required>
+                  </div>
+                  <div class="mb-3 mt-4">
+                    <label for="harga" class="form-label">- :</label>
+                    <input type="number" name="harga" id="harga" class="form-control" min="0" required>
+                  </div>
+                  <div class="mb-3 mt-4">
+                    <label for="harga" class="form-label">- :</label>
+                    <input type="number" name="harga" id="harga" class="form-control" min="0" required>
+                  </div>
+                </div>
               </div>
-              <div class="col-8"></div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <footer class="mt-5 ml-5 mt-sm-5 ml-sm-5">
-    <div class="container-fluid text-center">
-      <p>&copy; Copyright Yasir and Arya 2024</p>
-    </div>
-  </footer>
 </div>
+<footer class="mt-5 ml-5 mt-sm-5 ml-sm-5">
+  <div class="container-fluid text-center">
+    <p>&copy; Copyright Yasir and Arya 2024</p>
+  </div>
+</footer>
 <script src="../../js/bootstrap.min.js"></script>
 </body>
 </html>

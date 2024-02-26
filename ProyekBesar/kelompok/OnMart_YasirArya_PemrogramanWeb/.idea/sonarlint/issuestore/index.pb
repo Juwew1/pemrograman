@@ -47,3 +47,7 @@ J
 view/admin/addProducts.php,c\a\caca610f96c9c572c50834cc480af14e9647e556
 K
 view/admin/editProducts.php,9\4\94586a07f7dda2d35378ab9acac4368fee21bf82
+A
+config/config.php,4\8\484935103bc36a16b65a3b088e83628fc1601be8
+K
+services/admin/function.php,a\0\a0fef697a5b6090a0eeda6f32d68b35fb33dd15a

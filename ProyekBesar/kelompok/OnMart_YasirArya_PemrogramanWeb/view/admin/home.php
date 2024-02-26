@@ -187,12 +187,12 @@
       </div>
     </div>
   </div>
-  <footer class="mt-5 ml-5 mt-sm-5 ml-sm-5">
-    <div class="container-fluid text-center">
-      <p>&copy; Copyright Yasir and Arya 2024</p>
-    </div>
-  </footer>
 </div>
+<footer class="mt-5 ml-5 mt-sm-5 ml-sm-5">
+  <div class="container-fluid text-center">
+    <p>&copy; Copyright Yasir and Arya 2024</p>
+  </div>
+</footer>
 <script src="../../js/bootstrap.min.js"></script>
 </body>
 </html>
