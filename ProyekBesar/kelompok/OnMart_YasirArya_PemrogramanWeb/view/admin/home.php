@@ -1,3 +1,14 @@
+<?php
+
+require_once '../../services/admin/FunctionPrducts.php';
+
+$products = query("SELECT * FROM products");
+
+$stockTotal = query("SELECT SUM(stok_produk) AS total_stok FROM products");
+
+$todolist = query("SELECT * FROM todolist");
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,16 +18,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>OnMart Admin</title>
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
-  <style>
-    #navigation-link p a {
-      color: white;
-    }
-
-    #navigation-link p a:hover {
-      color: salmon;
-      font-size: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="../../css/adminNavigationStyle.css">
+  <link rel="stylesheet" href="../../css/adminImgCardStyle.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -58,10 +61,18 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-6 m-2">
-                      <img src="../../img/ad-product.1024x1024.png" class="img-fluid" alt="products">
+                      <img src="../../img/ad-product.1024x1024.png" class="img-fluid image-card" alt="products">
                     </div>
                     <div class="col-sm-5 text-end">
-                      <span class="fs-3">0</span>
+                      <span class="fs-3">
+                        <?php if (!empty($stockTotal)) { ?>
+                          0
+                        <?php } else {
+                          foreach ($stockTotal as $stock) {
+                            echo $stock['total_stok'];
+                          }
+                        } ?>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -73,7 +84,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-6 m-2">
-                      <img src="../../img/users.1024x717.png" class="img-fluid" alt="products">
+                      <img src="../../img/users.1024x717.png" class="img-fluid image-card" alt="products">
                     </div>
                     <div class="col-sm-5 text-end">
                       <span class="fs-3">0</span>
@@ -88,7 +99,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-6 m-2">
-                      <img src="../../img/shopping-cart.1024x922.png" class="img-fluid" alt="products">
+                      <img src="../../img/shopping-cart.1024x922.png" class="img-fluid image-card" alt="products">
                     </div>
                     <div class="col-sm-5 text-end">
                       <span class="fs-3">0</span>
@@ -103,7 +114,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-6 m-2">
-                      <img src="../../img/credit-card.1024x769.png" class="img-fluid" alt="products">
+                      <img src="../../img/credit-card.1024x769.png" class="img-fluid image-card" alt="products">
                     </div>
                     <div class="col-sm-5 text-end">
                       <span class="fs-3">0</span>
@@ -118,33 +129,27 @@
         <div class="row">
           <div class="col-8 col-sm-6 mt-3">
             <div class="card">
-              <div class="card-header bg-success"></div>
+              <div class="card-header bg-info"></div>
               <div class="card-body">
                 <div class="container">
                   <p>Data terbaru yang ditambahkan</p>
-                  <!--                  Data yang disimpan disini akan di ambil dari
-                                        data base. -->
-                  <div class="card">
-                    <div class="card-body">
-                      <div id="dataProduk">
-                        <p>Nama: Nama akan Diganti dengan data yang di <strong>PHP</strong></p>
-                        <p>Kategori: data PHP</p>
-                        <p>Tanggal: data PHP</p>
-                        <p>Kode Produk: data PHP</p>
+                  <?php if (empty($products)) { ?>
+                    <p class="mt-5 text-center">Belum ada data baru yang ditambahkan</p>
+                  <?php } else { ?>
+                    <?php foreach ($products as $product) { ?>
+                      <div class="card">
+                        <div class="card-body">
+                          <div id="dataProduk">
+                            <p>Nama: <?= $product['nama_produk'] ?></p>
+                            <p>Kategori: <?= $product['jenis_produk'] ?></p>
+                            <p>Tanggal: <?= $product['created_at'] ?></p>
+                            <p>Kode Produk: <?= $product['kode_produk'] ?></p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="card">
-                    <div class="card-body">
-                      <div id="dataProduk">
-                        <p>Nama: Nama akan Diganti dengan data yang di <strong>PHP</strong></p>
-                        <p>Kategori: data PHP</p>
-                        <p>Tanggal: data PHP</p>
-                        <p>Kode Produk: data PHP</p>
-                      </div>
-                    </div>
-                  </div>
+                      <br>
+                    <?php } ?>
+                  <?php } ?>
                 </div>
               </div>
             </div>
@@ -153,22 +158,67 @@
               <div class="card-body">
                 <div class="container">
                   <p>Todo List</p>
-                  <button class="btn btn-info mb-5">Tambah List</button>
-                  <div class="card">
-                    <div class="card-body">
-                      <span>menambah produk baru</span>
-                      <button class="btn btn-danger float-end">Hapus</button>&nbsp;
-                      <button class="btn btn-success float-end">Selesai</button>
+                  <!-- Button trigger modal -->
+                  <button
+                    type="button"
+                    class="btn btn-info mb-5 text-white"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"> Tambah
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="staticBackdrop"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <form action="../../services/admin/FunctionTodolists.php" method="post">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                              <label for="todo">Masukan Todo</label>
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <textarea
+                              name="todo"
+                              id="todo"
+                              class="form-control"
+                              placeholder="Masukan List yang akan disimpan"
+                            ></textarea>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
-                  <br>
-                  <div class="card">
-                    <div class="card-body">
-                      <span>produk 1 akan kadaluwarsa pada tanggal sekian</span>
-                      <button class="btn btn-danger float-end">Hapus</button>&nbsp;
-                      <button class="btn btn-success float-end">Selesai</button>
-                    </div>
-                  </div>
+                  <?php if (empty($todolist)) { ?>
+                    <p class="text-center">Belum ada list yang ditambahkan</p>
+                  <?php } else { ?>
+                    <?php foreach ($todolist as $todo) { ?>
+                      <div class="card">
+                        <div class="card-body">
+                          <p class="mb-3"><?= $todo['pesan'] ?></p>
+                          <a
+                            href="../../services/admin/deleteList.php?id=<?= $todo['id'] ?>"
+                            class="btn btn-danger text-white float-end"
+                            onclick="return confirm('Yakin menghapus list?')"
+                          >Hapus</a>
+                          <a href="#" class="btn btn-success float-end">selesai</a>
+                        </div>
+                      </div>
+                      <br>
+                    <?php } ?>
+                  <?php } ?>
                 </div>
               </div>
             </div>

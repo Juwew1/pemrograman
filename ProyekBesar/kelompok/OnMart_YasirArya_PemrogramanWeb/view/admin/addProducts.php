@@ -1,3 +1,19 @@
+<?php
+
+require_once '../../services/admin/FunctionPrducts.php';
+
+// mengecek apakah tombol submit ditekan atau belum
+if (isset($_POST['submit'])) {
+  // mengecek apakah data berhasil ditambahkan atau tidak
+  if (tambahProduk($_POST) > 0) {
+    echo "<script>alert('Data berhasil ditambahkan!'); document.location.href = 'product.php'</script>";
+  } else {
+    echo "<script>alert('Data gagal ditambahkan!');</script>";
+  }
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,16 +23,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>OnMart Admin</title>
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
-  <style>
-    #navigation-link p a {
-      color: white;
-    }
-
-    #navigation-link p a:hover {
-      color: salmon;
-      font-size: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="../../css/adminNavigationStyle.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -92,18 +99,18 @@
                     <label for="kadaluwarsa" class="form-label">Tanggal Kadaluwarsa :</label>
                     <input type="date" name="kadaluwarsa" id="kadaluwarsa" class="form-control" required>
                   </div>
-                  <div class="mb-3 mt-4">
-                    <label for="stok" class="form-label">- :</label>
-                    <input type="number" name="stok" id="stok" class="form-control" min="0" max="1000" required>
-                  </div>
-                  <div class="mb-3 mt-4">
-                    <label for="harga" class="form-label">- :</label>
-                    <input type="number" name="harga" id="harga" class="form-control" min="0" required>
-                  </div>
-                  <div class="mb-3 mt-4">
-                    <label for="harga" class="form-label">- :</label>
-                    <input type="number" name="harga" id="harga" class="form-control" min="0" required>
-                  </div>
+<!--                  <div class="mb-3 mt-4">-->
+<!--                    <label for="stok" class="form-label">- :</label>-->
+<!--                    <input type="number" name="stok" id="stok" class="form-control" min="0" max="1000" required>-->
+<!--                  </div>-->
+<!--                  <div class="mb-3 mt-4">-->
+<!--                    <label for="harga" class="form-label">- :</label>-->
+<!--                    <input type="number" name="harga" id="harga" class="form-control" min="0" required>-->
+<!--                  </div>-->
+<!--                  <div class="mb-3 mt-4">-->
+<!--                    <label for="harga" class="form-label">- :</label>-->
+<!--                    <input type="number" name="harga" id="harga" class="form-control" min="0" required>-->
+<!--                  </div>-->
                 </div>
               </div>
             </form>

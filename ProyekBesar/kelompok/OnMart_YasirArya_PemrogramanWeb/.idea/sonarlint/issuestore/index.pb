@@ -23,8 +23,6 @@ A
 css/bootstrap.css,f\c\fcd418984df8efa4af99dc01ff73465148271722
 =
 css/style.css,1\2\126b0f8c1ec95fb3a2541745bfc21365b438d668
-B
-css/adminStyle.css,9\4\94a9a963de8c1d48a28b434f93e7ce2ef476ada7
 F
 view/admin/product.php,9\9\99a5f20f0b7b28acf55950ae0b55422d277afaa8
 H
@@ -37,8 +35,6 @@ H
 view/admin/customers.php,7\2\72cd94f0114cf6eee98229019823c849d91e66cf
 E
 view/admin/orders.php,0\8\08991bb76d0f0e98f441ea922dbef6c15289fbcf
-H
-css/adminButtonStyle.css,9\c\9cff683b11f379d4c464f0712bc4e5ad2f514d4d
 E
 css/bootstrap.min.css,0\f\0f647bba076518ea08e688ce23968f2b1bb22f7d
 K
@@ -49,5 +45,17 @@ K
 view/admin/editProducts.php,9\4\94586a07f7dda2d35378ab9acac4368fee21bf82
 A
 config/config.php,4\8\484935103bc36a16b65a3b088e83628fc1601be8
-K
-services/admin/function.php,a\0\a0fef697a5b6090a0eeda6f32d68b35fb33dd15a
+P
+ services/admin/deleteProduct.php,0\3\0313459ada2d737a271d32fcd60ec4555003c5e4
+L
+services/admin/promotion.php,7\9\79174e583ae992a8533230d6688d32c0424119bd
+M
+services/admin/deleteList.php,c\8\c80a2f296582afb35a5ff614f93e21e98a16531c
+R
+"services/admin/FunctionPrducts.php,b\4\b450dd3cfe86493fbd90f86d02a2884e79560ab6
+T
+$services/admin/FunctionTodolists.php,2\5\255bf0678a72015874789a660f5f5c1f589baf9d
+L
+css/adminNavigationStyle.css,a\7\a70c47b9e51bf94749e2323d17709d1eefe9ede3
+I
+css/adminImgCardStyle.css,3\4\3464eda5b770a3c3aaa5f337a8bcc1ec8c5bdd7d

@@ -7,17 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>OnMart Admin</title>
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
-  <style>
-    #navigation-link p a {
-      color: white;
-    }
-
-    #navigation-link p a:hover {
-      color: salmon;
-      font-size: 20px;
-    }
-
-  </style>
+  <link rel="stylesheet" href="../../css/adminNavigationStyle.css">
 </head>
 <body>
 <div class="container-fluid">

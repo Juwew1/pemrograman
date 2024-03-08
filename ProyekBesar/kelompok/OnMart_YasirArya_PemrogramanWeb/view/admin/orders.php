@@ -7,16 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>OnMart Admin</title>
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
-  <style>
-    #navigation-link p a {
-      color: white;
-    }
-
-    #navigation-link p a:hover {
-      color: salmon;
-      font-size: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="../../css/adminNavigationStyle.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -60,7 +51,7 @@
             <th>No. Telepon</th>
             <th>Order ID</th>
             <th>Pembayaran</th>
-            <th>Edit</th>
+            <th>Aksi</th>
           </tr>
           </thead>
           <tbody>
@@ -74,7 +65,7 @@
             <td>Orde ID</td>
             <td>Lunas</td>
             <td>
-              <a href="detailOrders.php" class="btn btn-info">Detail</a>
+              <a href="detailOrders.php" class="btn btn-info text-white">Detail</a>
             </td>
           </tr>
           <tr>
@@ -85,7 +76,7 @@
             <td>-</td>
             <td>-</td>
             <td>
-              <a href="detailOrders.php" class="btn btn-info">Detail</a>
+              <a href="detailOrders.php" class="btn btn-info text-white">Detail</a>
             </td>
           </tr>
           <!--          Data yang disimpan disini akan di ambil dari

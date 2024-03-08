@@ -1,3 +1,11 @@
+<?php
+
+require_once '../../services/admin/FunctionPrducts.php';
+
+$products = query("SELECT * FROM products");
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,16 +15,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>OnMart Admin</title>
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
-  <style>
-    #navigation-link p a {
-      color: white;
-    }
-
-    #navigation-link p a:hover {
-      color: salmon;
-      font-size: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="../../css/adminNavigationStyle.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -51,55 +50,54 @@
         <h1 class="mt-4">Product</h1>
         <hr>
         <a href="addProducts.php" class="btn btn-success mt-5">Tambah Produk</a>
-        <table class="table table-striped mt-3">
-          <caption hidden>Tabel untuk menampilkan produk yang disimpan di database</caption>
-          <thead>
-          <tr>
-            <th>No</th>
-            <th>Gambar</th>
-            <th>Nama Produk</th>
-            <th>Jenis Produk</th>
-            <th>Stok</th>
-            <th>Harga</th>
-            <th>Harga Promo</th>
-            <th>Edit</th>
-          </tr>
-          </thead>
-          <tbody>
-<!--          Data yang disimpan disini akan di ambil dari
-                      data base. -->
-          <tr>
-            <td>1</td>
-            <td>-</td>
-            <td>Sari Roti</td>
-            <td>Makanan</td>
-            <td>300</td>
-            <td>Rp. 15,000</td>
-            <td>Rp. 12,500</td>
-            <td>
-              <a href="editProducts.php" class="btn btn-success">Edit</a>
-              <button class="btn btn-danger">Hapus</button>
-              <button class="btn btn-warning">Promo</button>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>-</td>
-            <td>Sari Roti</td>
-            <td>Makanan</td>
-            <td>300</td>
-            <td>Rp. 15,000</td>
-            <td>Rp. -</td>
-            <td>
-              <button class="btn btn-success">Edit</button>
-              <button class="btn btn-danger">Hapus</button>
-              <button class="btn btn-warning">Promo</button>
-            </td>
-          </tr>
-<!--          Data yang disimpan disini akan di ambil dari
-            data base. -->
-          </tbody>
-        </table>
+        <?php if (empty($products)) { ?>
+          <p class="mt-5 text-center">Belum ada Product yang ditambahkan</p>
+        <?php } else { ?>
+          <table class="table table-striped mt-3">
+            <caption hidden>Tabel untuk menampilkan produk yang disimpan di database</caption>
+            <thead>
+            <tr>
+              <th>No</th>
+              <th>Gambar</th>
+              <th>Nama Produk</th>
+              <th>Jenis Produk</th>
+              <th>Stok</th>
+              <th>Harga</th>
+              <th>Harga Promo</th>
+              <th>Aksi</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php $no = 1; ?>
+            <?php foreach ($products as $product) { ?>
+              <tr>
+                <td><?= $no; ?></td>
+                <td>
+                  <img src="../../img/dataProduct/<?= $product['gambar_produk']; ?>" alt="gambar produk" width="75">
+                </td>
+                <td><?= $product['nama_produk']; ?></td>
+                <td><?= $product['jenis_produk']; ?></td>
+                <td><?= $product['stok_produk']; ?></td>
+                <td><?= $product['harga_produk']; ?></td>
+                <td>-</td>
+                <td>
+                  <a href="editProducts.php" class="btn btn-success">Edit</a>
+                  <a
+                    href="../../services/admin/deleteProduct.php?id=<?= $product['kode_produk'] ?>"
+                    class="btn btn-danger"
+                    onclick="return confirm('Yakin menghapus produk?')"
+                  >Hapus</a>
+                  <a
+                    href="../../services/admin/promotion.php?id=<?= $product['kode_produk']?>"
+                    class="btn btn-warning"
+                  >Promo</a>
+                </td>
+              </tr>
+              <?php $no++; ?>
+            <?php } ?>
+            </tbody>
+          </table>
+        <?php }?>
       </div>
     </div>
   </div>
