@@ -20,3 +20,5 @@ create table products
 desc products;
 
 select * from products;
+
+SELECT SUM(stok_produk) AS total_stok FROM products;

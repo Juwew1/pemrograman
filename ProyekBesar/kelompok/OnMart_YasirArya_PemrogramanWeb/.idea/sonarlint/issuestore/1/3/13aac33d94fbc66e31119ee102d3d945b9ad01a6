@@ -1,0 +1,6 @@
+
+€	php:S1142G">This function has 4 returns, which is more than the 3 allowed.(öÓºæ8éæ¼®â1J$f9a32fdf-10a8-468f-8aa8-25348b7f3320
+s	php:S1481B",Remove this unused "$result" local variable.(ÍÕâ®ûÿÿÿÿ8êæ¼®â1J$04a9cb7d-751e-425d-838a-10a656b0dec7
+t	php:S1481’",Remove this unused "$result" local variable.(ÍÕâ®ûÿÿÿÿ8êæ¼®â1J$0b736128-ed82-4264-b7bf-54fd77e7970d
+h	php:S2003"&Replace "include" with "include_once".(ý…ŒÞ8ëæ¼®â1J$94530432-cf82-4687-984e-d813639249e0
+Ž	php:S4833"LReplace "include" with namespace import mechanism through the "use" keyword.(ý…ŒÞ8ëæ¼®â1J$dce6b14c-50ad-4d51-9c05-ab712dd77592

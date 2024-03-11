@@ -14,6 +14,19 @@ create table todolist
 
 desc todolist;
 
-select * from todolist;
+select *
+from todolist;
 
-DELETE FROM todolist WHERE id = 1;
+DELETE
+FROM todolist
+WHERE id = 1;
+
+alter table todolist
+    add column status varchar(10) default 'belum' after pesan;
+
+select *
+from todolist;
+
+select count(status) as totalStatus
+from todolist
+where todolist.status = 'belum';

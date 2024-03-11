@@ -1,0 +1,6 @@
+
+Œphp:S103G"KSplit this 127 characters long line (which is greater than 120 authorized).(í³×™8Œ±¢­â1J$bd6037fd-7caf-4a38-8fe3-5110e43d90d2
+s	php:S1481",Remove this unused "$result" local variable.(ÍÕâ®ûÿÿÿÿ8¢Æˆâ1J$c7c764cc-a121-46a2-abca-c195bb8fcf3c
+p	php:S1172,".Remove the unused function parameter "$table".(ú‡şÂ8ŠÕÉˆâ1J$df7441ca-5a7e-4ef3-9526-9aabb6a1cc80
+o	php:S11728".Remove the unused function parameter "$table".(±›±\8±èÜˆâ1J$a9bc85c1-5dcd-4815-9545-128b350998fa
+˜	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(ëíŸıÿÿÿÿ8Ë²Â­â1J$e4073167-2efd-4cd9-b963-840411e42ddb
