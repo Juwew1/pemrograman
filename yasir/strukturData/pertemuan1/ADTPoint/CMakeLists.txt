@@ -3,6 +3,4 @@ project(ADTPoint C)
 
 set(CMAKE_C_STANDARD 17)
 
-add_executable(ADTPoint main.c
-        lib/point.h
-        app/point.c)
+add_executable(ADTPoint main.c)

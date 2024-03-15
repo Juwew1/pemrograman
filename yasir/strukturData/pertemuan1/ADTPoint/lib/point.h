@@ -196,7 +196,7 @@ POINT MirrorOf(POINT P, boolean SbX, boolean SbY);
  * @return
  * Menghitung jarak P dari titik Origin (0, 0)
  */
-float JarakO(POINT P);
+double JarakO(POINT P);
 
 /**
  *

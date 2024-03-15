@@ -1,28 +1,15 @@
 /**
- * Program: point.h
+ * Program: point.c
  * Author: (2350081004, Muhamad Yasir Noval)
  * Kelas: A
  * Deskripsi: Header file dari prototype point
  * Tanggal: 15 Maret 2024
  */
 
-#ifndef POINT_H
-#define POINT_H
-
 #include "../lib/point.h"
-#include "../lib/boolean.h"
 #include <stdio.h>
 #include <conio.h>
-
-#define Absis(P) (P).X
-#define Ordinat(P) (P).Y
-#define PI 3.14159265
-
-// Definisi ABSTRACT DATA TYPETYPE POINT
-typedef struct {
-    int X;
-    int Y;
-} POINT;
+#include <math.h>
 
 // PrototypePrototype POINT
 /**
@@ -114,10 +101,7 @@ void BacaPoint(POINT *P) {
     printf("Masukan Ordinat: ");
     scanf("%d", &y);
 
-    SetAbsis(&(*P), x);
-    SetOrdinat(&(*P), y);
-
-    CreatePoint(&(*P));
+    CreatePoint2(&(*P), x, y);
 }
 
 /**
@@ -166,12 +150,16 @@ boolean NEQ(POINT P1, POINT P2) {
  * @param P1
  * @param P2
  * @return
- * Mengirimkan true jika PI 1 < P2, dan false jika sebaliknya
+ * Mengirimkan true jika P1 < P2, dan false jika sebaliknya
  * definisi lebih kecil: posisi titik lebih ke kiri atau ke bawah dalam
  * bidang kartesian
  */
 boolean LT(POINT P1, POINT P2) {
-
+    if ((GetAbsis(P1) < GetAbsis(P2)) || (GetOrdinat(P1) < GetOrdinat(P2))) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -184,7 +172,11 @@ boolean LT(POINT P1, POINT P2) {
  * bidang kartesian
  */
 boolean MT(POINT P1, POINT P2) {
-
+    if ((GetAbsis(P1) > GetAbsis(P2)) || (GetOrdinat(P1) > GetOrdinat(P2))) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // Kelompok menentukan di mana P berada
@@ -267,7 +259,19 @@ int Kuadran(POINT P) {
  * Jika SbY bernilai true, maka dicerminkan terhadap Sumbu Y
  */
 POINT MirrorOf(POINT P, boolean SbX, boolean SbY) {
+    // kamus lokal
+    POINT newPoint;
 
+    // algoritma
+    CreatePoint2(&newPoint, GetAbsis(P), GetOrdinat(P));
+
+    if (SbX == true) {
+        newPoint.X = GetAbsis(P) * -1;
+    } else if (SbY == true) {
+        newPoint.Y = GetOrdinat(P) * -1;
+    }
+
+    return newPoint;
 }
 
 /**
@@ -276,8 +280,24 @@ POINT MirrorOf(POINT P, boolean SbX, boolean SbY) {
  * @return
  * Menghitung jarak P dari titik Origin (0, 0)
  */
-float JarakO(POINT P) {
+double JarakO(POINT P) {
+    // kamus lokal
+    double jarak;
 
+    // algoritma
+    /**
+     * gunakan function sqrt() yang diambil dari library math.h
+     * function sqrt digunakan sebagai akar dari matematika dan memiliki 1
+     * parameter
+     *
+     * gunakan function pow() yang diambil dari library math.h
+     * function pow digunakan sebaga exponensial dari matematika dan memiliki 2
+     * parameter, parameter yang pertama digunakan sebagai base, dan parameter
+     * kedua digunakan sebagai exponen
+     */
+    jarak = sqrt(pow((GetAbsis(P) - 0), 2) + pow((GetOrdinat(P) - 0), 2));
+
+    return jarak;
 }
 
 /**
@@ -288,7 +308,9 @@ float JarakO(POINT P) {
  * Contoh: Jika koordinat semula(9,9) menjadi (9,0)
  */
 void GeserKeSbX(POINT *P) {
-
+    if (GetOrdinat((*P)) != 0) {
+        SetOrdinat(&(*P), 0);
+    }
 }
 
 /**
@@ -299,7 +321,7 @@ void GeserKeSbX(POINT *P) {
  * Contoh: Jika koordinat semula(9,9) menjadi (0,9)
  */
 void GeserKeSbY(POINT *P) {
-
+    if (GetAbsis((*P)) != 0) {
+        SetAbsis(&(*P), 0);
+    }
 }
-
-#endif //POINT_H
