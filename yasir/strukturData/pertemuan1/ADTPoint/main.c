@@ -1,5 +1,5 @@
 /**
- * Program: point.h
+ * Program: main.c
  * Author: (2350081004, Muhamad Yasir Noval)
  * Kelas: A
  * Deskripsi: Header file dari prototype point
@@ -100,7 +100,7 @@ int main() {
     GeserKeSbY(&P2);
     CetakPoint(P2);
     printf("\n");
-    
+
     newPoint = MirrorOf(P1, IsOnSbX(P1), IsOnSbY(P1));
     CetakPoint(newPoint);
     printf("\n");

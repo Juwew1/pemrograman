@@ -1,6 +1,9 @@
 /**
  * Program: boolean.h
- * Deskripsi: header file boolean
+ * Author: (2350081004, Muhamad Yasir Noval)
+ * Kelas: A
+ * Deskripsi: Header file dari boolean
+ * Tanggal: 15 Maret 2024
  */
 
 #ifndef boolean_H
