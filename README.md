@@ -14,6 +14,4 @@ tugas kuliah atau praktikum kuliah
 
 ## Cara clone repositori dari github
 gunakan perintah:
-git clone <link project github yang akan di clone>
-
-catatan tidak usah menggunakan tanda < dan tanda >
+git clone link_github
