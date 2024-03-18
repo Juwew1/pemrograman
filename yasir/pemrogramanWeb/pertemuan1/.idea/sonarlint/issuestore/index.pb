@@ -10,3 +10,12 @@
 :
 
 table.html,2\d\2df0062a9f2cf3920328c615610a4fda1d522cb3
+;
+tabel1.html,a\e\ae77c19c3bf98810baec94815baee5950f18fc65
+;
+tabel2.html,5\9\599f39374f026a36a740ef168ccd6d59d58b075a
+;
+tabel3.html,4\9\49eccb8ae6e00c503ac553be69ed76857341b1c3
+:
+
+tugas.html,0\6\0604e71824f48c2d744e797d1c4830180e0e7f3a
