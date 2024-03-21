@@ -35,9 +35,9 @@ void setPAkhir(LINE *L, POINT NewEndP) {
 }
 
 void BacaLine(LINE *L) {
-    printf("Point Awal: ");
+    printf("Point Awal:\n ");
     BacaPoint(&(*L).PAwal);
-    printf("\nPoint Akhir: ");
+    printf("\nPoint Akhir:\n ");
     BacaPoint(&(*L).PAkhir);
 }
 
@@ -46,19 +46,19 @@ void CetakLine(LINE L) {
 }
 
 boolean IsEQLine(LINE L1, LINE L2) {
-    return EQ(L1.PAwal, L2.PAwal) && EQ(L1.PAkhir, L2.PAkhir);
+    return EQ(GetPAwal(L1), GetPAwal(L2)) && EQ(GetPAkhir(L1), GetPAkhir(L2));
 }
 
 boolean IsNEQLine(LINE L1, LINE L2) {
-    return NEQ(L1.PAwal, L2.PAwal) && NEQ(L1.PAkhir, L2.PAkhir);
+    return NEQ(GetPAwal(L1), GetPAwal(L2)) && NEQ(GetPAkhir(L1), GetPAkhir(L2));
 }
 
 boolean IsLOnSbX(LINE L) {
-    return IsOnSbX(L.PAwal) && IsOnSbX(L.PAkhir);
+    return IsOnSbX(GetPAwal(L)) && IsOnSbX(GetPAkhir(L));
 }
 
 boolean IsLOnSbY(LINE L) {
-    return IsOnSbY(L.PAwal) && IsOnSbY(L.PAkhir);
+    return IsOnSbY(GetPAwal(L)) && IsOnSbY(GetPAkhir(L));
 }
 
 boolean IsTegakLurus(LINE L, boolean SbX, boolean SbY) {

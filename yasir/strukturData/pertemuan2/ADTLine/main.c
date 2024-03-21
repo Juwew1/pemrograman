@@ -18,15 +18,17 @@ int main() {
     CetakLine(L1);
 
     CreateLine(&L2);
-    SetOrdinat(&(L2.PAkhir), 10);
+    SetOrdinat(&(L2.PAkhir), 12);
     printf("L2 = ");
     CetakLine(L2);
 
     printf("\nGaris L1 akan digeser sejauh: \n");
     printf("delta X: ");
     scanf("%d", &deltaX);
+
     printf("delta Y: ");
     scanf("%d", &deltaY);
+    
     L3 = GeserLine(L1, deltaX, deltaY);
     printf("L3 = ");
     CetakLine(L3);
