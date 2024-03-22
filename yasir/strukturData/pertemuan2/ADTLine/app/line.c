@@ -61,18 +61,19 @@ boolean IsLOnSbY(LINE L) {
     return IsOnSbY(GetPAwal(L)) && IsOnSbY(GetPAkhir(L));
 }
 
-boolean IsTegakLurus(LINE L, boolean SbX, boolean SbY) {
-    boolean TL;
+boolean IsTegakLurus(LINE L1, LINE L2) {
+    int M1, M2, result;
 
-    if (SbY) {
-        TL = (L.PAkhir.X - L.PAwal.X) == 0;
+    M1 = (GetPAkhir(L2).Y - GetPAwal(L1).Y) / (GetPAkhir(L2).X - GetPAwal(L1).X);
+    M2 = (GetPAkhir(L2).Y - GetPAwal(L1).Y) / (GetPAkhir(L2).X - GetPAwal(L1).X);
+
+    result = M1 * M2;
+
+    if (result == -1) {
+        return true;
+    } else {
+        return false;
     }
-
-    if (SbX) {
-        TL = Gradien(L) == 0;
-    }
-
-    return TL;
 }
 
 boolean IsSejajar(LINE L1, LINE L2) {

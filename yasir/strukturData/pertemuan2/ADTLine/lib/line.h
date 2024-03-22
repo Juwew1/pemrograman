@@ -46,7 +46,7 @@ boolean IsLOnSbX(LINE L);
 
 boolean IsLOnSbY(LINE L);
 
-boolean IsTegakLurus(LINE L, boolean SbX, boolean SbY);
+boolean IsTegakLurus(LINE L1, LINE L2);
 
 boolean IsSejajar(LINE L1, LINE L2);
 

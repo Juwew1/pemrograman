@@ -41,59 +41,65 @@ int main() {
     if (IsEQLine(L1, L2)) {
         printf("Nilai L1 sama dengan L2\n");
     }
+
     if (IsNEQLine(L1, L2)) {
         printf("Nilai L1 tidak sama dengan L2\n");
     }
+
     if (IsEQLine(L3, L4)) {
         printf("Nilai L3 sama dengan L4\n");
     }
+
     if (IsNEQLine(L3, L4)) {
         printf("Nilai L3 tidak sama dengan L4\n");
     }
 
     printf("\nPengecekan garis apakah tegak lurus\n");
-    if (IsTegakLurus(L1, true, false)) {
-        printf("Garis L1 Tegak lurus dengan sumbu X\n");
-    }
-    if (IsTegakLurus(L2, true, false)) {
-        printf("Garis L2 Tegak lurus dengan sumbu X\n");
-    }
-    if (IsTegakLurus(L3, true, false)) {
-        printf("Garis L3 Tegak lurus dengan sumbu X\n");
-    }
-    if (IsTegakLurus(L4, true, false)) {
-        printf("Garis L4 Tegak lurus dengan sumbu X\n");
+    if (IsTegakLurus(L1, L2)) {
+        printf("Garis L1 Tegak lurus dengan L2\n");
+    } else {
+        printf("Garis L1 Tidak Tegak lurus dengan L2\n");
     }
 
-    if (IsTegakLurus(L1, false, true)) {
-        printf("Garis L1 Tegak lurus dengan sumbu Y\n");
+    if (IsTegakLurus(L2, L3)) {
+        printf("Garis L2 Tegak lurus dengan L3\n");
+    } else {
+        printf("Garis L2 Tidak Tegak lurus dengan L3\n");
     }
-    if (IsTegakLurus(L2, false, true)) {
-        printf("Garis L2 Tegak lurus dengan sumbu Y\n");
+
+    if (IsTegakLurus(L3, L4)) {
+        printf("Garis L3 Tegak lurus dengan L4\n");
+    } else {
+        printf("Garis L3 Tidak Tegak lurus dengan L4\n");
     }
-    if (IsTegakLurus(L3, false, true)) {
-        printf("Garis L3 Tegak lurus dengan sumbu Y\n");
-    }
-    if (IsTegakLurus(L4, false, true)) {
-        printf("Garis L4 Tegak lurus dengan sumbu Y\n");
+
+    if (IsTegakLurus(L4, L1)) {
+        printf("Garis L4 Tegak lurus dengan L1\n");
+    } else {
+        printf("Garis L4 Tidak Tegak lurus dengan L1\n");
     }
 
     printf("\nPengecekan garis apakah sejajar\n");
     if (IsSejajar(L1, L2)) {
         printf("Garis L1 sejajar dengan L2\n");
     }
+
     if (IsSejajar(L1, L3)) {
         printf("Garis L1 sejajar dengan L3\n");
     }
+
     if (IsSejajar(L1, L4)) {
         printf("Garis L1 sejajar dengan L4\n");
     }
+
     if (IsSejajar(L2, L3)) {
         printf("Garis L2 sejajar dengan L3\n");
     }
+
     if (IsSejajar(L2, L4)) {
         printf("Garis L2 sejajar dengan L4\n");
     }
+
     if (IsSejajar(L3, L4)) {
         printf("Garis L3 sejajar dengan L4\n");
     }
@@ -102,12 +108,15 @@ int main() {
     if (IsLOnSbX(L1)) {
         printf("Garis L1 berada pada sumbu X\n");
     }
+
     if (IsLOnSbX(L2)) {
         printf("Garis L2 berada pada sumbu X\n");
     }
+
     if (IsLOnSbX(L3)) {
         printf("Garis L3 berada pada sumbu X\n");
     }
+
     if (IsLOnSbX(L4)) {
         printf("Garis L4 berada pada sumbu X\n");
     }
@@ -115,12 +124,15 @@ int main() {
     if (IsLOnSbY(L1)) {
         printf("Garis L1 berada pada sumbu Y\n");
     }
+
     if (IsLOnSbY(L2)) {
         printf("Garis L2 berada pada sumbu Y\n");
     }
+
     if (IsLOnSbY(L3)) {
         printf("Garis L3 berada pada sumbu Y\n");
     }
+
     if (IsLOnSbY(L4)) {
         printf("Garis L4 berada pada sumbu Y\n");
     }
