@@ -55,12 +55,6 @@ build CMakeFiles/ADTQueueContinue.dir/main.c.obj: C_COMPILER__ADTQueueContinue_u
   OBJECT_DIR = CMakeFiles\ADTQueueContinue.dir
   OBJECT_FILE_DIR = CMakeFiles\ADTQueueContinue.dir
 
-build CMakeFiles/ADTQueueContinue.dir/app/queue.c.obj: C_COMPILER__ADTQueueContinue_unscanned_Debug C$:/Users/aibnu/Documents/Perkuliahan/pemrograman/yasir/strukturData/pertemuan6/ADTQueueContinue/app/queue.c || cmake_object_order_depends_target_ADTQueueContinue
-  DEP_FILE = CMakeFiles\ADTQueueContinue.dir\app\queue.c.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ADTQueueContinue.dir
-  OBJECT_FILE_DIR = CMakeFiles\ADTQueueContinue.dir\app
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ADTQueueContinue
@@ -69,7 +63,7 @@ build CMakeFiles/ADTQueueContinue.dir/app/queue.c.obj: C_COMPILER__ADTQueueConti
 #############################################
 # Link the executable ADTQueueContinue.exe
 
-build ADTQueueContinue.exe: C_EXECUTABLE_LINKER__ADTQueueContinue_Debug CMakeFiles/ADTQueueContinue.dir/main.c.obj CMakeFiles/ADTQueueContinue.dir/app/queue.c.obj
+build ADTQueueContinue.exe: C_EXECUTABLE_LINKER__ADTQueueContinue_Debug CMakeFiles/ADTQueueContinue.dir/main.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ADTQueueContinue.dir

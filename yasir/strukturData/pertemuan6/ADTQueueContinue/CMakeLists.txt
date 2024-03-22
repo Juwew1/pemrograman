@@ -3,6 +3,4 @@ project(ADTQueueContinue C)
 
 set(CMAKE_C_STANDARD 17)
 
-add_executable(ADTQueueContinue main.c
-        lib/queue.h
-        app/queue.c)
+add_executable(ADTQueueContinue main.c)

@@ -16,6 +16,7 @@
 
 #define Nil 0
 #define MaxEl 10
+#define IdxUndef (-999)
 #define Head(Q) (Q) .Head
 #define Tail(Q) (Q) .Tail
 #define InfoHead(Q) (Q) .T[(Q) .HEAD]
@@ -49,7 +50,7 @@ boolean IsQueueFull(Queue Q);
 void AddQueue(Queue *Q, infotype X);
 
 // Menghapus sebuah element queue
-void DelQueue(Queue *Q, infotype *X);
+void DelQueue(Queue *Q, infotype X);
 
 // {Kelompok interaksi dengan i/o device, Baca/Tulis}
 void PrintQueueInfo(Queue S);
@@ -58,5 +59,7 @@ void PrintQueueInfo(Queue S);
 boolean isInfoKetemu(Queue S, infotype X);
 
 address CariElemenQueue(Queue Q, int X);
+
+int elemen (int x);
 
 #endif //QUEUE_H

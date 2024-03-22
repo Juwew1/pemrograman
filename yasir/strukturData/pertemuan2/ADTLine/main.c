@@ -28,7 +28,7 @@ int main() {
 
     printf("delta Y: ");
     scanf("%d", &deltaY);
-    
+
     L3 = GeserLine(L1, deltaX, deltaY);
     printf("L3 = ");
     CetakLine(L3);

@@ -3,40 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="assets/style.css">
-    <title>Form 2</title>
+    <title>Tugas Form 2</title>
 </head>
 <body>
-    <form action="form2.html" method="">
+    <form action="form2.html" method="post">
         <table border="1">
             <tr>
-                <th><label>Name</label></th>
-                <th><label>Value</label></th>
+                <th>Name</th>
+                <th>Value</th>
             </tr>
             <tr>
-                <td><label>Name</label></td>
-                <td><input type="text" name="name" id="name"></td>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" name="name" id="name" size="25"></td>
             </tr>
             <tr>
                 <td><label>Sex</label></td>
                 <td>
-                    <input type="radio" name="radio-button" id=""><label>Male</label><br>
-                    <input type="radio" name="radio-button" id=""><label>Female</label>
+                    <input type="radio" name="gender" id="Male"><label>Male</label><br>
+                    <input type="radio" name="gender" id="Female"><label>Female</label>
                 </td>
             </tr>
             <tr>
                 <td><label>Eye Color</label></td>
                 <td>
-                    <input type="checkbox" name="eye-color" id=""><label>Over 6 feet tall</label><br>
-                    <input type="checkbox" name="eye-color" id=""><label>Over 200 pounds</label>
+                    <input type="checkbox" name="eye-color" id="eye1"><label>Over 6 feet tall</label><br>
+                    <input type="checkbox" name="eye-color" id="eye2"><label>Over 200 pounds</label>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">Describe your athletic ability:</td>
             </tr>
             <tr>
-                <td colspan="2"><textarea name="ability" id="" cols="36" rows="2"></textarea></td>
+                <td colspan="2"><textarea name="ability" id="ability" cols="36" rows="2"></textarea></td>
             </tr>
             <tr>
                 <td colspan="2" align="center"><button>Enter my information</button></td>
