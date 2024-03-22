@@ -68,7 +68,7 @@ void DelQueue(Queue *Q, infotype X) {
     } else {
         for (i = 1; i <= (*Q).TAIL; i++) {
             if ((*Q).T[i] == X) {
-                if ((*Q).T[i] == (*Q).HEAD) {
+                if ((*Q).T[i] == (*Q).T[(*Q).HEAD]) {
                     tmp = (*Q).T[i];
                     break;
                 } else {
