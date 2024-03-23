@@ -37,7 +37,7 @@ int main() {
     SetElm(&MyTab, index, newElm);
     CetakTabInt(MyTab);
     
-    if (isEmpty(MyTab)) {
+    if (IsEmpty(MyTab)) {
         printf("\nTabel kosong");
     } else {
         printf("\nTabel tidak kosong");

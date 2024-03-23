@@ -19,7 +19,7 @@
 #define IdxUndef -999
 
 typedef struct {
-    ElType T1[nMax + 1];
+    ElType Tb[nMax + 1];
     int neff;
 } TabInt;
 
@@ -40,7 +40,7 @@ int GetElmt(TabInt T, int index);
 void SetElm(TabInt *T, int i, int v);
 
 /*kelompok operasi cek elemen kosong atau penuh*/
-boolean isEmpty(TabInt T);
+boolean IsEmpty(TabInt T);
 
 boolean IsFull(TabInt T);
 

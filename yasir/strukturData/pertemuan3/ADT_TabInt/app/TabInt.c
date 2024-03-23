@@ -17,7 +17,7 @@ void CreateTabInt(TabInt *T) {
 
 /*selektor tabint*/
 int GetJumElmt(TabInt T) {
-    if (isEmpty(T)) {
+    if (IsEmpty(T)) {
         return 0;
     } else {
         return T.neff;
@@ -25,11 +25,11 @@ int GetJumElmt(TabInt T) {
 }
 
 int GetFirstIdx(TabInt T) {
-    return T.T1[1];
+    return T.Tb[1];
 }
 
 int GetLlastIdx(TabInt T) {
-    return T.T1[T.neff];
+    return T.Tb[T.neff];
 }
 
 int GetElmt(TabInt T, int index) {
@@ -39,8 +39,8 @@ int GetElmt(TabInt T, int index) {
     // algoritma
     if (index <= nMax) {
         for (i = 1; i <= T.neff; i++) {
-            if (T.T1[i] == index) {
-                return T.T1[i];
+            if (T.Tb[i] == index) {
+                return T.Tb[i];
             }
         }
 
@@ -53,14 +53,14 @@ int GetElmt(TabInt T, int index) {
 /*set nilai*/
 void SetElm(TabInt *T, int i, int v) {
     if (i <= (*T).neff) {
-        (*T).T1[i] = v;
+        (*T).Tb[i] = v;
     } else {
         printf("index ke-%d tidak diketahui", i);
     }
 }
 
 /*kelompok operasi cek elemen kosong atau penuh*/
-boolean isEmpty(TabInt T) {
+boolean IsEmpty(TabInt T) {
     if (T.neff == 0) {
         return true;
     } else {
@@ -92,14 +92,14 @@ void BacaElm(TabInt *T) {
 
 void CetakTabInt(TabInt T) {
     for (int i = 1; i <= T.neff; i++) {
-        printf("[%d] ", T.T1[i]);
+        printf("[%d] ", T.Tb[i]);
     }
 }
 
 void AddElm(TabInt *T, int x) {
     if (!IsFull((*T))) {
         (*T).neff++;
-        (*T).T1[(*T).neff] = x;
+        (*T).Tb[(*T).neff] = x;
     } else {
         printf("Tabel penuh");
     }
@@ -107,18 +107,18 @@ void AddElm(TabInt *T, int x) {
 
 /*kelompok operasi aritmatika*/
 TabInt KaliTab(TabInt Tab1, TabInt Tab2) {
-    TabInt NewTAb;
+    TabInt NewTab;
     int i;
 
-    CreateTabInt(&NewTAb);
+    CreateTabInt(&NewTab);
 
-    if (!isEmpty(Tab1) && !isEmpty(Tab2) && IsEQTab(Tab1, Tab2)) {
+    if (!IsEmpty(Tab1) && !IsEmpty(Tab2) && IsEQTab(Tab1, Tab2)) {
         for (i = 1; i <= Tab1.neff; i++) {
-            AddElm(&NewTAb, Tab1.T1[i] * Tab2.T1[i]);
+            AddElm(&NewTab, Tab1.Tb[i] * Tab2.Tb[i]);
         }
     }
 
-    return NewTAb;
+    return NewTab;
 }
 
 TabInt KaliKons(TabInt T, int c) {
@@ -128,11 +128,12 @@ TabInt KaliKons(TabInt T, int c) {
     CreateTabInt(&NewTab);
 
     for (i = 1; i <= T.neff; i++) {
-        AddElm(&NewTab, T.T1[i] * c);
+        AddElm(&NewTab, T.Tb[i] * c);
     }
 
     return NewTab;
 }
+
 /*kelompok operasi relasional terhadap TabInt*/
 boolean IsEQTab(TabInt Tab1, TabInt Tab2) {
     if (Tab1.neff == Tab2.neff) {
@@ -154,7 +155,7 @@ TabInt InversTab(TabInt T) {
     CreateTabInt(&NewTab);
 
     for (i = T.neff; i >= 1; i--) {
-        AddElm(&NewTab, T.T1[i]);
+        AddElm(&NewTab, T.Tb[i]);
     }
 
     return NewTab;
@@ -167,7 +168,7 @@ boolean IsElemenAda(TabInt T, ElType X) {
     i = 1;
     hasil = false;
     while (i <= T.neff && !hasil) {
-        if (T.T1[i] == X) {
+        if (T.Tb[i] == X) {
             hasil = true;
         } else {
             i++;
@@ -180,11 +181,11 @@ boolean IsElemenAda(TabInt T, ElType X) {
 int CariElemen(TabInt T, ElType X) {
     int i;
 
-    if (isEmpty(T)) {
+    if (IsEmpty(T)) {
         return IdxUndef;
     } else {
         for (i = 1; i <= T.neff ; i++) {
-            if (T.T1[i] == X) {
+            if (T.Tb[i] == X) {
                 return i;
             }
         }
