@@ -60,18 +60,19 @@ boolean IsLOnSbY(LINE L) {
     return IsOnSbY(L.PAwal) && IsOnSbY(L.PAkhir);
 }
 
-boolean IsTegakLurus(LINE L, boolean SbX, boolean SbY) {
-    boolean TL;
-    
-    if(SbY) {
-        TL = (L.PAkhir.X - L.PAwal.X) == 0;
-    }
+boolean IsTegakLurus(LINE L1, LINE L2) {
+    double M1, M2, result;
 
-    if(SbX) {
-        TL = Gradien(L) == 0;
-    }
+    M1 = Gradien(L1);
+    M2 = Gradien(L2);
 
-    return TL;
+    result = M1 * M2;
+
+    if (result == -1) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 boolean IsSejajar(LINE L1, LINE L2) {
@@ -90,5 +91,14 @@ LINE GeserLine(LINE L, int deltaX, int deltaY) {
 }
 
 double Gradien(LINE L) {
-    return (double)(L.PAkhir.Y - L.PAwal.Y) / (double)(L.PAkhir.X - L.PAwal.X);
+    int Mx;
+
+    Mx = (L.PAkhir.X - L.PAwal.X);
+
+    // error handling division by zero
+    if (Mx != 0) {
+        return (double) (L.PAkhir.Y - L.PAwal.Y) / (double) Mx;
+    } else {
+        return false;
+    }
 }
