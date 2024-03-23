@@ -5,6 +5,7 @@
     Deskripsi: Program utama yang menjalankan ketiga program sebelumnya
     Tanggal: 15/03/2024
 */
+
 #include <stdio.h>
 #include "app/line.c"
 #include "app/point.c"

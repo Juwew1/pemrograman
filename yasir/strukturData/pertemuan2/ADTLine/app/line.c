@@ -5,6 +5,7 @@
     Deskripsi: Mengisi instruksi di dalam fungsi dan prosedur yang sudah kita buat
     Tanggal: 15/03/2024
 */
+
 #include <stdio.h>
 #include "../lib/line.h"
 
@@ -63,9 +64,17 @@ boolean IsLOnSbY(LINE L) {
 
 boolean IsTegakLurus(LINE L1, LINE L2) {
     int M1, M2, result;
+    int Mx;
 
-    M1 = (GetPAkhir(L2).Y - GetPAwal(L1).Y) / (GetPAkhir(L2).X - GetPAwal(L1).X);
-    M2 = (GetPAkhir(L2).Y - GetPAwal(L1).Y) / (GetPAkhir(L2).X - GetPAwal(L1).X);
+    Mx = (GetPAkhir(L2).X - GetPAwal(L1).X);
+
+    // error handling division by zero
+    if (Mx != 0) {
+        M1 = (GetPAkhir(L2).Y - GetPAwal(L1).Y) / Mx;
+        M2 = (GetPAkhir(L2).Y - GetPAwal(L1).Y) / Mx;
+    } else {
+        return false;
+    }
 
     result = M1 * M2;
 
