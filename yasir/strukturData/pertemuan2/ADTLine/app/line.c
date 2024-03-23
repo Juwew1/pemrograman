@@ -63,18 +63,10 @@ boolean IsLOnSbY(LINE L) {
 }
 
 boolean IsTegakLurus(LINE L1, LINE L2) {
-    int M1, M2, result;
-    int Mx;
+    double M1, M2, result;
 
-    Mx = (GetPAkhir(L2).X - GetPAwal(L1).X);
-
-    // error handling division by zero
-    if (Mx != 0) {
-        M1 = (GetPAkhir(L2).Y - GetPAwal(L1).Y) / Mx;
-        M2 = (GetPAkhir(L2).Y - GetPAwal(L1).Y) / Mx;
-    } else {
-        return false;
-    }
+    M1 = Gradien(L1);
+    M2 = Gradien(L2);
 
     result = M1 * M2;
 
@@ -101,5 +93,14 @@ LINE GeserLine(LINE L, int deltaX, int deltaY) {
 }
 
 double Gradien(LINE L) {
-    return (double) (L.PAkhir.Y - L.PAwal.Y) / (double) (L.PAkhir.X - L.PAwal.X);
+    int Mx;
+
+    Mx = (L.PAkhir.X - L.PAwal.X);
+
+    // error handling division by zero
+    if (Mx != 0) {
+        return (double) (L.PAkhir.Y - L.PAwal.Y) / (double) Mx;
+    } else {
+        return false;
+    }
 }
