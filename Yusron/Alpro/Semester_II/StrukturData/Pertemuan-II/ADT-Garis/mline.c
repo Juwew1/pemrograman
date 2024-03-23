@@ -51,30 +51,28 @@ int main() {
     }
 
     printf("\nPengecekan garis apakah tegak lurus\n");
-    if(IsTegakLurus(L1, true, false)) {
-        printf("Garis L1 Tegak lurus dengan sumbu X\n");
-    }
-    if(IsTegakLurus(L2, true, false)) {
-        printf("Garis L2 Tegak lurus dengan sumbu X\n");
-    }
-    if(IsTegakLurus(L3, true, false)) {
-        printf("Garis L3 Tegak lurus dengan sumbu X\n");
-    }
-    if(IsTegakLurus(L4, true, false)) {
-        printf("Garis L4 Tegak lurus dengan sumbu X\n");
+    if (IsTegakLurus(L1, L2)) {
+        printf("Garis L1 Tegak lurus dengan L2\n");
+    } else {
+        printf("Garis L1 Tidak Tegak lurus dengan L2\n");
     }
 
-    if(IsTegakLurus(L1, false, true)) {
-        printf("Garis L1 Tegak lurus dengan sumbu Y\n");
+    if (IsTegakLurus(L2, L3)) {
+        printf("Garis L2 Tegak lurus dengan L3\n");
+    } else {
+        printf("Garis L2 Tidak Tegak lurus dengan L3\n");
     }
-    if(IsTegakLurus(L2, false, true)) {
-        printf("Garis L2 Tegak lurus dengan sumbu Y\n");
+
+    if (IsTegakLurus(L3, L4)) {
+        printf("Garis L3 Tegak lurus dengan L4\n");
+    } else {
+        printf("Garis L3 Tidak Tegak lurus dengan L4\n");
     }
-    if(IsTegakLurus(L3, false, true)) {
-        printf("Garis L3 Tegak lurus dengan sumbu Y\n");
-    }
-    if(IsTegakLurus(L4, false, true)) {
-        printf("Garis L4 Tegak lurus dengan sumbu Y\n");
+
+    if (IsTegakLurus(L4, L1)) {
+        printf("Garis L4 Tegak lurus dengan L1\n");
+    } else {
+        printf("Garis L4 Tidak Tegak lurus dengan L1\n");
     }
 
     printf("\nPengecekan garis apakah sejajar\n");
