@@ -36,7 +36,7 @@ boolean IsEQLine(LINE L1, LINE L2);
 boolean IsNEQLine(LINE L1, LINE L2);
 boolean IsLOnSbX(LINE L);
 boolean IsLOnSbY(LINE L);
-boolean IsTegakLurus(LINE L, boolean SbX, boolean SbY);
+boolean IsTegakLurus(LINE L1, LINE L2);
 boolean IsSejajar(LINE L1, LINE L2);
 
 LINE GeserLine(LINE L, int deltaX, int deltaY);
