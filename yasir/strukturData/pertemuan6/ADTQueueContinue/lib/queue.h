@@ -17,10 +17,10 @@
 #define Nil 0
 #define MaxEl 10
 #define IdxUndef (-999)
-#define Head(Q) (Q) .Head
-#define Tail(Q) (Q) .Tail
-#define InfoHead(Q) (Q) .T[(Q) .HEAD]
-#define InfoTail(Q) (Q) .T[(Q) .TAIL]
+#define Head(Q) (Q).Head
+#define Tail(Q) (Q).Tail
+#define InfoHead(Q) (Q).T[(Q).HEAD]
+#define InfoTail(Q) (Q).T[(Q).TAIL]
 
 // Definisi Queue
 typedef int infotype;

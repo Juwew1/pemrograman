@@ -1,0 +1,7 @@
+
+€	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷ÃûÿÿÿÿJ$6f2e36a2-393f-4380-a8f9-11b8982a1b7c
+ƒ	Web:S6848"ÂAvoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.(ªì©óùÿÿÿÿJ$a2bcc683-e704-4edb-9f5e-9e9d0d3d1651
+mWeb:ImgWithoutAltCheck"%Add an "alt" attribute to this image.(¯‘å¨J$b9d2fb11-9670-45a3-ba73-91064d6a3e0f
+	Web:S6847"RNon-interactive elements should not be assigned mouse or keyboard event listeners.(¯‘å¨J$3bd05fa0-75cf-4ff0-83d4-2d2ea94de6bd
+rWeb:ImgWithoutAltCheck"%Add an "alt" attribute to this image.(€ìÛşÿÿÿÿJ$bf46dfc2-9431-43f8-9637-61caa73f4132
+’	Web:S6847"RNon-interactive elements should not be assigned mouse or keyboard event listeners.(€ìÛşÿÿÿÿJ$76b595d0-3efd-41c0-8c19-d1367a035e43
