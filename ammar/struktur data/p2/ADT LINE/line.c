@@ -1,125 +1,151 @@
 /*
-	program		: line.c
-	author		: 2350081008/Ammar Bagas Fathurrahman Wantoro
-	kelas		: A
-	deskripsi	: header file dari prototype point
-	tanggal		: 3/21/2024
-
+    Program: line.c
+    Author: 2350081008/Ammar Bagas Fathurrahman Wantoro
+    Kelas: A
+    Deskripsi: program line.c merupakan program yang menuliskan semua operasi fungsi dari ADT
+    Tanggal: 03/20/2024
 */
 #include <stdio.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "line.h"
 
-/*konstruktor*/
-void CreateLine(LINE *L) {
+void CreateLine(LINE *L)
+{
     CreatePoint(&(*L).PAwal);
     CreatePoint(&(*L).PAkhir);
 }
-void CreateLine2(LINE *L, POINT First, POINT End) {
+
+void CreateLine2(LINE *L, POINT First, POINT End)
+{
     (*L).PAwal = First;
     (*L).PAkhir = End;
 }
 
-/*selektor*/
-POINT GetPAwal(LINE L) {
-    /*mengembalikan titik garis awal*/
+POINT GetPAwal(LINE L)
+{
     return L.PAwal;
 }
-/*selektor*/
-POINT GetPAkhir(LINE L) {
-    /*mengembalikan titik garis akhir*/
+
+POINT GetPAkhir(LINE L)
+{
     return L.PAkhir;
 }
-/*melakukan set nilai pada point garis*/
-void SetPAwal(LINE *L, POINT NewFirstP) {
-    /*melakukan setelan pada point awal garis*/
+
+void SetPAwal(LINE *L, POINT NewFirstP)
+{
     (*L).PAwal = NewFirstP;
 }
-/*melakukan set nilai pada point garis*/
-void setPAkhir(LINE *L, POINT NewEndP) {
-    /*melakukan setelan pada pint titik garis*/
+
+void setPAkhir(LINE *L, POINT NewEndP)
+{
     (*L).PAkhir = NewEndP;
 }
-/*kelompok input dan output baca dan tulis*/
-void BacaLine(LINE *L) {
-    /*melakukan baca pada nilai point awal dan point akhir */
-    printf("Point Awal: ");
+
+void BacaLine(LINE *L)
+{
+    printf("Point Awal:\n ");
     BacaPoint(&(*L).PAwal);
-    printf("\nPoint Akhir: ");
+    printf("\nPoint Akhir:\n ");
     BacaPoint(&(*L).PAkhir);
 }
-void CetakLine(LINE L) {
-    /*melakukan pencetakan pada garis*/
-    printf("Garis dari titik awal (%d,%d) ke titik akhir (%d,%d)\n", L.PAwal.X, L.PAwal.Y, L.PAkhir.X, L.PAkhir.Y);
+
+void CetakLine(LINE L)
+{
+    printf("Garis dari (%d,%d) ke (%d,%d)\n", L.PAwal.X, L.PAwal.Y, L.PAkhir.X, L.PAkhir.Y);
 }
 
-boolean IsEQLine(LINE L1, LINE L2) {
-    /*mengembalikan nilai apakan titik garis 1 dan garis 2 sama atau ekivalen*/
-    return EQ(L1.PAwal, L2.PAwal) && EQ(L1.PAkhir, L2.PAkhir);
-}
-
-boolean IsNEQLine(LINE L1, LINE L2) {
-    /*mengembalikan nilai apakah titk garis 1 dan garis 2 tidak sama atau tidak ekivalen*/
-    return NEQ(L1.PAwal, L2.PAwal) && NEQ(L1.PAkhir, L2.PAkhir);
-}
-
-boolean IsLOnSbX(LINE L) {
-    /*melakukan pemeriksaan apakah garis berada di sumbu x*/
-    return IsOnSbX(L.PAwal) && IsOnSbX(L.PAkhir);
-}
-
-boolean IsLOnSbY(LINE L) {
-    /*melakukan pemeruksaan dan pengembalian nilai apakah titik garis berada di sumbu y*/
-    return IsOnSbY(L.PAwal) && IsOnSbY(L.PAkhir);
-}
-
-boolean IsTegakLurus(LINE L, boolean SbX, boolean SbY) {
-    /*melakukan pengembalian nilai apakah garis daling tegak lurus*/
-    boolean TL;
+boolean IsEQLine(LINE L1, LINE L2)
+{
+    if (EQ(GetPAwal(L1), GetPAwal(L2)) && EQ(GetPAkhir(L1), GetPAkhir(L2)))
+    {
+        return true;
+    }else
+    {
+        return false;
+    }
     
-    if(SbY) {
+}
+
+boolean IsNEQLine(LINE L1, LINE L2)
+{
+    if (NEQ(GetPAwal(L1), GetPAwal(L2)) && NEQ(GetPAkhir(L1), GetPAkhir(L2)))
+    {
+        return true;
+        /* code */
+    }else
+    {
+        return false;
+    }
+    
+    
+    
+}
+
+boolean IsLOnSbX(LINE L)
+{
+    if (IsOnSbX(GetPAwal(L)) && IsOnSbX(GetPAkhir(L)))
+    {
+        return true;
+    }else
+    {
+        return false;
+    }
+}
+
+boolean IsLOnSbY(LINE L)
+{
+    if (IsOnSbY(GetPAwal(L)) && IsOnSbY(GetPAkhir(L)))
+    {
+        return true;
         
-        if ((L.PAkhir.X - L.PAwal.X) == 0){
-            TL = true;
-            /*jika kondisi benar maka TL true*/
-        }
+    }else
+    {
+        return false;
     }
-
-    if(SbX) {
-        if (Gradien(L) == 0){
-            /*jika kondisi benar maka kondisi true*/
-            TL = true;
-        }
-    }
-
-    return TL;
 }
 
-boolean IsSejajar(LINE L1, LINE L2) {
-    /*jika garis sejajar maka pengembalian nilai akan true*/
-    boolean hasil;
-    hasil = false;
-    if(Gradien(L1) == Gradien(L2)){
-        hasil = true;
+boolean IsTegakLurus(LINE L1, LINE L2)
+{
+    int M1, M2, result;
+
+    M1 = (GetPAkhir(L2).Y - GetPAwal(L1).Y) / (GetPAkhir(L2).X - GetPAwal(L1).X);
+    M2 = (GetPAkhir(L2).Y - GetPAwal(L1).Y) / (GetPAkhir(L2).X - GetPAwal(L1).X);
+
+    result = M1 * M2;
+
+    if (result == -1)
+    {
+        return true;
     }
-    return hasil;
+    else
+    {
+        return false;
+    }
 }
 
-LINE GeserLine(LINE L, int deltaX, int deltaY) {
-    LINE newLine;
-    /*menggeser garis dari masukan pengguna*/
-    newLine.PAwal.X = L.PAwal.X + deltaX;
-    newLine.PAwal.Y = L.PAwal.Y + deltaY;
-    newLine.PAkhir.X = L.PAkhir.X + deltaX;
-    newLine.PAkhir.Y = L.PAkhir.Y + deltaY;
-
-    return newLine;
+boolean IsSejajar(LINE L1, LINE L2)
+{
+    if (Gradien(L1) == Gradien(L2))
+    {
+        return true;
+    }else
+    {
+        return false;
+    }
 }
 
-double Gradien(LINE L) {
-    double hasil;
-    /*rumus gradien*/
-    hasil = (L.PAkhir.Y - L.PAwal.Y)/(L.PAwal.X - L.PAwal.X);
-    return hasil;
+LINE GeserLine(LINE L, int deltaX, int deltaY)
+{
+    LINE newL;
+
+    newL.PAwal.X = L.PAwal.X + deltaX;
+    newL.PAwal.Y = L.PAwal.Y + deltaY;
+    newL.PAkhir.X = L.PAkhir.X + deltaX;
+    newL.PAkhir.Y = L.PAkhir.Y + deltaY;
+
+    return newL;
+}
+
+double Gradien(LINE L)
+{
+    return (double)(L.PAkhir.Y - L.PAwal.Y) / (double)(L.PAkhir.X - L.PAwal.X);
 }
