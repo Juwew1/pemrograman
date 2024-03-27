@@ -1,12 +1,13 @@
 <?php
-
-function copryright($name)
+function copryright($name1, $name2)
 {
-    $code = base64_encode($name);
+    $code1 = base64_encode($name1);
+    $code2 = base64_encode($name2);
+
     $codey = "eWFzaXI=";
     $codea = "YXJ5YQ==";
-    var_dump($code);
-    if ($code == $codey || $code == $codea) {
+
+    if ($code1 == $codey and $code2 == $codea) {
         return true;
     } else {
         return false;
