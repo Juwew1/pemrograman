@@ -4,4 +4,5 @@ project(ADT_LLL C)
 set(CMAKE_C_STANDARD 17)
 
 add_executable(ADT_LLL main.c
-        lib/list.h)
+        lib/list.h
+        app/list.c)

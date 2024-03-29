@@ -1,4 +1,4 @@
 "D:\Program Files\JetBrains\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/Program Files/JetBrains/Programs/CLion/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\aibnu\Documents\Perkuliahan\pemrograman\yasir\strukturData\pertemuan4\ADT_LLL -B C:\Users\aibnu\Documents\Perkuliahan\pemrograman\yasir\strukturData\pertemuan4\ADT_LLL\cmake-build-debug
--- Configuring done (0.8s)
--- Generating done (0.1s)
+-- Configuring done (1.7s)
+-- Generating done (1.7s)
 -- Build files have been written to: C:/Users/aibnu/Documents/Perkuliahan/pemrograman/yasir/strukturData/pertemuan4/ADT_LLL/cmake-build-debug

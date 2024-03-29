@@ -1,5 +1,5 @@
 /**
- * Program: boolean.h
+ * Program: list.h
  * Author: (2350081004, Muhamad Yasir Noval)
  * Kelas: A
  * Deskripsi: Header file dari prototype queue

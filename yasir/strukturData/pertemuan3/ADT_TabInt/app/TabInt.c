@@ -116,6 +116,8 @@ TabInt KaliTab(TabInt Tab1, TabInt Tab2) {
         for (i = 1; i <= Tab1.neff; i++) {
             AddElm(&NewTab, Tab1.Tb[i] * Tab2.Tb[i]);
         }
+    } else {
+        return NewTab;
     }
 
     return NewTab;

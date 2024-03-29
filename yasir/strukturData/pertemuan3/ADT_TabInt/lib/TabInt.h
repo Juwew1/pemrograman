@@ -16,7 +16,7 @@
 
 #define nMax 10
 #define ElType int
-#define IdxUndef -999
+#define IdxUndef (-999)
 
 typedef struct {
     ElType Tb[nMax + 1];
