@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Website Structure</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contoh.php">
+    <link rel="stylesheet" href="studiKasus3-1.css">
+</head>
+<body>
+    <header>
+        <h1 style="color: black;">Registrasi Account</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <form action="StudiKasus3.php" method="post">
+        <div class="container">
+            <div class="card mt-5 shadow">
+                <div class="card-body">
+                    <table>
+                        <tr>
+                            <td><label style="color: white;" for="nama">Nama Lengkap</label></td>
+                            <td>:</td>
+                            <td>
+                                <input type="text" class="form-control m-2" name="nama" id="nama" placeholder="Your Name..">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label style="color: white; for="email">Email</label></td>
+                            <td>:</td>
+                            <td>
+                                <input type="email" class="form-control m-2" name="email" id="email" placeholder="Your email..">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label style="color: white; for="pas">Password</label></td>
+                            <td>:</td>
+                            <td>
+                                <input type="password" class="form-control m-2 m-2" name="pas" id="pas" maxlength="12" placeholder="Your Password..">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label style="color: white; for="date"> Tanggal Lahir </label></td>
+                            <td>:</td>
+                            <td><input type="date" class="form-control m-2 m-2" id="birth" name="Tanggal Lahir"> </td>
+                        </tr>
+                        <tr>
+                            <td> <Label style="color: white;  for="country">Country</Label></td>
+                            <td>: </td>
+                            <td>
+                                <select id="country" name="country" style="width: 103%;">
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Korea">Korea</option>
+                                    <option value="England">England</option>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label style="color: white; for="jenis kelamin"> Jenis Kelamin</label></td>
+                            <td>:</td>
+                            <td >
+                                <input type="radio" id="jenis kelamin" name="Jenis Kelamin" value="Perempuan">Perempuan
+                                <input type="radio"  name="Jenis Kelamin" value="Laki-laki">Laki-laki
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="submit"
+                                       class="btn btn-primary m-2">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        <!-- </div> -->
+    </form>
+</div>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; My website</p>
+    </footer>
+</body>
+</html>
